@@ -27,12 +27,12 @@ class Home extends Component {
    
 
     return (
-        <div>
+        <div id="content">
           <p>Username</p>
-          <input></input>
+          <input type="text" name="username"/>
           <p>Password</p>
-          <input></input>
-          <button id="loginbutton" onClick={this.login}></button>
+          <input type="password" name="password"/><br></br>
+          <button id="loginbutton" onClick={this.login}>Log In</button>
         </div>
      
     );
