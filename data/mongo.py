@@ -7,8 +7,8 @@ import sys
 import getpass
 import pymongo
 
-from project2.SchoolSystem.users.model import User, Admin, Teacher, Student
-from project2.SchoolSystem.data.logger import get_logger
+from SchoolSystem.users.model import User, Admin, Teacher, Student
+from SchoolSystem.data.logger import get_logger
 
 _log = get_logger(__name__)
 
@@ -18,6 +18,14 @@ except:
     _log.exception('Could not connect to Mongo')
     raise
 
+def login(user: User):
+    '''A function that takes in a username and returns a user object'''
+    _log.info('Attempting to retrieve user from database')
+    username = user.username
+    query_dict = {'username': username}
+    user_dict = _scl.users.find_one(query_dict)
+    _log.debug(type(user_dict))
+    return User.from_dict(user_dict) if user_dict else None
 
 def _get_id():
     '''Retrieves the next id in the database and increments it'''
@@ -29,6 +37,7 @@ if __name__ == '__main__':
     _log.info('Running Mongo script: dropping collections from project2 database')
     _log.info(_bank.list_collection_names())
     _scl.users.drop()
+
 
 
     _scl.counter.insert_one({'_id': 'UNIQUE_COUNT', 'count': 0})

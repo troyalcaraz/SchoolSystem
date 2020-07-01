@@ -1,9 +1,9 @@
 '''Module to test the project2.users.model module'''
 import unittest
 
-from project2.SchoolSystem.users.model import User
+from SchoolSystem.users.model import User
 
-from project2.SchoolSystem.data.logger import get_logger
+from SchoolSystem.data.logger import get_logger
 
 _log = get_logger(__name__)
 
