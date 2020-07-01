@@ -7,8 +7,8 @@ import sys
 import getpass
 import pymongo
 
-from project2.SchoolSystem.users.model import User, Admin, Teacher, Student
-from project2.SchoolSystem.data.logger import get_logger
+from SchoolSystem.users.model import User, Admin, Teacher, Student
+from SchoolSystem.data.logger import get_logger
 
 _log = get_logger(__name__)
 
