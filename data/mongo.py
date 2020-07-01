@@ -27,7 +27,7 @@ def _get_id():
 
 if __name__ == '__main__':
     _log.info('Running Mongo script: dropping collections from project2 database')
-    _log.info(_bank.list_collection_names())
+    _log.info(_scl.list_collection_names())
     _scl.users.drop()
 
 
