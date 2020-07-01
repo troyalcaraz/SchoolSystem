@@ -3,7 +3,7 @@ import json
 import jwt
 import datetime
 
-from project2.SchoolSystem.data.logger import get_logger
+from SchoolSystem.data.logger import get_logger
 
 _log = get_logger(__name__)
 _secret_key = '101010101unique'
