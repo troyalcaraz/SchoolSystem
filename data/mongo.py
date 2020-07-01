@@ -18,6 +18,16 @@ except:
     _log.exception('Could not connect to Mongo')
     raise
 
+def get_user_by_username(username):
+    return _scl.users.find_one({'username': username})
+
+def get_grades_by_username(username):
+    user_dict = _scl.users.find_one({'username': username})
+    grades = []
+    for grade in user_dict.grades:
+        grades.append(grade)
+    return grades
+
 
 def _get_id():
     '''Retrieves the next id in the database and increments it'''
