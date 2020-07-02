@@ -16,8 +16,8 @@ def login():
     if request.method == 'POST':
         _log.debug("In POST")
         # getting the user information from the form and getting the information from the db
-        _log.debug(request.form.get("username"))
-        temp = request.form.get("username")
+        _log.debug(request.json['username'])
+        temp = request.json['username']
         _log.debug(temp)
         user = db.login(temp)
         _log.debug(user)
@@ -25,9 +25,9 @@ def login():
         #     # Generate our token
         #     auth_token = user.encode_auth_token()
         #     _log.debug(dir(auth_token))
-        #     response = make_response(jsonify(user))
-        #     response.set_cookie('authorization', auth_token.decode())
-            return response, 200
+            # response = make_response(jsonify(user))
+            # response.set_cookie('authorization', auth_token.decode())
+            return user.to_dict(), 200
         return {}, 401
     # elif request.method == 'GET':
     #     # auth_token = request.cookies.get('authorization')

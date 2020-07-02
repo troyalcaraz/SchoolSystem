@@ -639,3 +639,285 @@ Traceback (most recent call last):
     username = user.username
 AttributeError: 'NoneType' object has no attribute 'username'
 2020-06-30 20:48:21,583 - werkzeug:113 - INFO - 127.0.0.1 - - [30/Jun/2020 20:48:21] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 13:58:10,714 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 13:58:25,221 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 13:58:25] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 13:58:25,223 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 13:58:25,223 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 22, in login
+    user = db.login(temp)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/data/mongo.py", line 24, in login
+    username = user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2020-07-01 13:58:25,232 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 13:58:25] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 16:32:31,082 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:32:42,747 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:32:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:32:42,750 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:32:42,751 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 22, in login
+    user = db.login(temp)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/data/mongo.py", line 24, in login
+    username = user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2020-07-01 16:32:42,756 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:32:42] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 16:35:02,481 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:35:09,880 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:35:09] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:35:09,883 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:35:09,883 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 22, in login
+    user = db.login(temp)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/data/mongo.py", line 24, in login
+    username = user.username
+AttributeError: 'str' object has no attribute 'username'
+2020-07-01 16:35:09,893 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:35:09] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 16:36:36,891 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:36:43,703 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:36:43] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:36:43,706 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:36:43,707 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 22, in login
+    user = db.login(temp)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/data/mongo.py", line 24, in login
+    username = user.username
+NameError: name 'user' is not defined
+2020-07-01 16:36:43,714 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:36:43] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 16:36:59,569 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:37:08,608 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:37:08] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:37:08,610 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:37:08,841 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 30, in login
+    return response, 200
+NameError: name 'response' is not defined
+2020-07-01 16:37:08,843 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:37:08] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 16:38:00,260 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:38:07,989 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:38:07] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:38:07,992 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:38:08,193 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a User.
+2020-07-01 16:38:08,195 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:38:08] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 16:38:53,603 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:39:01,161 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:39:01] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:39:01,164 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:39:01,355 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2112, in make_response
+    rv = jsonify(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/local/lib/python3.7/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/lib/python3.7/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ObjectId is not JSON serializable
+2020-07-01 16:39:01,365 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:39:01] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 16:49:27,074 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:49:37,160 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:49:37] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:49:37,163 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:49:37,367 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:49:37] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-07-01 16:51:35,844 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:51:42,671 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:51:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:51:42,674 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:51:42,867 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:51:42] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-07-01 16:53:17,919 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:53:24,356 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:53:24] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:53:24,358 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:53:24,543 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:53:24] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-07-01 16:54:12,378 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:54:12] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:54:12,381 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:54:12,399 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:54:12] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-07-01 16:57:11,797 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:57:20,324 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:57:20] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:57:20,326 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:57:20,575 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:57:20] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 16:58:04,578 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 16:58:26,549 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:58:26] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:58:26,551 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:58:26,731 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:58:26] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 16:59:17,232 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:59:17] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 16:59:17,235 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 16:59:17,254 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 16:59:17] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 17:05:49,390 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:05:49] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 17:05:49,396 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 17:05:49,424 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:05:49] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-07-01 17:06:27,945 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:06:27] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 17:06:27,948 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 17:06:28,031 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:06:28] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-07-01 17:13:14,696 - flask:1892 - ERROR - Exception on /users [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-07-01 17:13:14,699 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:13:14] "[35m[1mGET /users HTTP/1.1[0m" 500 -
+2020-07-01 17:21:53,055 - flask:1892 - ERROR - Exception on /users [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-07-01 17:21:53,057 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:21:53] "[35m[1mGET /users HTTP/1.1[0m" 500 -
+2020-07-01 17:29:57,199 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:29:57] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 17:29:57,202 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 19, in login
+    _log.debug(request.json['username'])
+KeyError: 'username'
+2020-07-01 17:29:57,205 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:29:57] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 17:31:22,311 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 17:31:29,414 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:31:29] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 17:31:29,416 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 19, in login
+    _log.debug(request.json['username'])
+KeyError: 'username'
+2020-07-01 17:31:29,420 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:31:29] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 17:33:33,638 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 17:36:13,169 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:36:13] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 17:36:13,172 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 17:36:13,376 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:36:13] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 17:38:04,625 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:38:04] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 17:38:04,629 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 17:38:04,652 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:38:04] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 17:38:41,825 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:38:41] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 17:38:41,830 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 17:38:41,857 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:38:41] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 17:39:06,933 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:39:06] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 17:39:06,936 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 17:39:06,965 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:39:06] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 17:39:53,823 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:39:53] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 17:39:53,825 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 17:39:53,844 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:39:53] "[37mPOST /users HTTP/1.1[0m" 200 -
