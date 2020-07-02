@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Student from '../Student/Student'
 import axios from 'axios'
 
 class Home extends Component {
