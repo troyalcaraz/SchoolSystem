@@ -13,7 +13,7 @@ from SchoolSystem.data.logger import get_logger
 _log = get_logger(__name__)
 
 try:
-    _scl = pymongo.MongoClient(os.environ.get('MONGO_URI')).project2
+    _scl = pymongo.MongoClient(os.environ.get('TroyMongoURI')).project2
 except:
     _log.exception('Could not connect to Mongo')
     raise
