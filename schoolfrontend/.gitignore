@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/Include/
+/Lib/
+/Scripts/
+pyvenv.cfg
+
+**/__pycache__/
+**/.vscode/
+**/*.log
+**/.vs/
