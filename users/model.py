@@ -11,14 +11,13 @@ _secret_key = '101010101unique'
 class User:
     '''A class that defines how Users should behave'''
     def __init__(self, db_id=-1, fullname='', username='', password='',
-                 address='', email=''):
+                 address='', role=''):
         self._id = db_id
         self.fullname = fullname
         self.username = username
         self.password = password
         self.address = address
-        self.email = email
-        # self.role = role not sure role is needed
+        self.role = role
 
     def get_id(self):
         '''Returns the id of the user'''
@@ -46,9 +45,9 @@ class User:
         '''Returns the dictionary representation of itself'''
         return self.__dict__
 
-    # def get_role(self):
-    #     '''returns the role of the user'''
-    #     return self.role
+    def get_role(self):
+        '''returns the role of the user'''
+        return self.role
 
     @classmethod
     def from_dict(cls, input_user):
@@ -85,14 +84,14 @@ class User:
 class Admin(User):
     '''A class that defines how Admins should behave'''
     def __init__(self, db_id=-1, fullname='', username='', password='',
-                 address='', email=''):
-        super(). __init__(db_id, fullname, username, password, address, email)
+                 address='', role=''):
+        super(). __init__(db_id, fullname, username, password, address, role)
 
 class Teacher(User):
     '''A class that defines how Teachers should behave'''
-    def __init__(self, db_id=-1, fullname='', username='', password='',
+    def __init__(self, db_id=-1, fullname='', username='', password='', role='',
                  substitute=False, ):
-        super(). __init__(db_id, fullname, username, password)
+        super(). __init__(db_id, fullname, username, password, role)
         self.assigned_students = []
         self.courses = []
         self.substitute = substitute
@@ -100,9 +99,9 @@ class Teacher(User):
 
 class Student(User):
     '''A class that defines how Students should behave'''
-    def __init__(self, db_id=-1, fullname='', username='', password='',
+    def __init__(self, db_id=-1, fullname='', username='', password='', role='',
                  absences=0, grade_level='', age=0):
-        super(). __init__(db_id, fullname, username, password)
+        super(). __init__(db_id, fullname, username, password, role)
         self.grades = []
         self.courses_taken = []
         self.absences = absences

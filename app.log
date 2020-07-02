@@ -921,3 +921,52 @@ KeyError: 'username'
 2020-07-01 17:39:53,823 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:39:53] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
 2020-07-01 17:39:53,825 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
 2020-07-01 17:39:53,844 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 17:39:53] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 18:02:42,195 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 18:04:15,581 - flask:1892 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 19, in login
+    _log.debug(request.json['username'])
+TypeError: 'NoneType' object is not subscriptable
+2020-07-01 18:04:15,585 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:04:15] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-01 18:04:45,975 - flask:1892 - ERROR - Exception on /users [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-07-01 18:04:45,976 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:04:45] "[35m[1mGET /users HTTP/1.1[0m" 500 -
+2020-07-01 18:22:10,312 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-01 18:22:53,120 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:22:53] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 18:22:53,123 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 18:22:53,411 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:22:53] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 18:26:28,947 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:26:28] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 18:26:28,950 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 18:26:28,976 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:26:28] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 18:27:03,615 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:27:03] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 18:27:03,617 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 18:27:03,640 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:27:03] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 18:37:17,259 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:17] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 18:37:17,264 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 18:37:17,284 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:17] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-01 18:37:42,267 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-01 18:37:42,270 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-01 18:37:42,292 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:42] "[37mPOST /users HTTP/1.1[0m" 200 -

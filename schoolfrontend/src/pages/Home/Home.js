@@ -28,8 +28,27 @@ class Home extends Component {
   }
     axios.post(this.URI + '/users', user)
     .then(res => {
-        console.log(res);
+        console.log(res.data.role);
          this.setState({ user: res.data.username});
+         if (res.data.role === 'admin'){
+           alert('you are an admin')
+          //  this.setState()
+          //  <Link to="../Admin/Admin.js">
+          window.location = "/Admin"
+         }
+         else if (res.data.role === 'teacher'){
+           alert('you are a teacher')
+           window.location = "/Teacher"
+         }
+         else if (res.data.role === 'student'){
+          alert('you are a student')
+          window.location = "/Student"
+
+        }
+        else {
+          alert('you are a NUN')
+
+        }
     });
   };
 

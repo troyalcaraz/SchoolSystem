@@ -21,7 +21,6 @@ except:
 def login(username):
     '''A function that takes in a username and returns a user object'''
     _log.info('Attempting to retrieve user from database')
-    # username = user.username
     query_dict = {'username': username}
     user_dict = _scl.users.find_one(query_dict)
     _log.debug(user_dict)
@@ -42,9 +41,9 @@ if __name__ == '__main__':
     _scl.counter.insert_one({'_id': 'UNIQUE_COUNT', 'count': 0})
 
     user_list = []
-    user_list.append(User(_get_id(), 'mik', 'mm', '11').to_dict())
-    user_list.append(User(_get_id(), 'john', 'dd', '22').to_dict())
-    user_list.append(User(_get_id(), 'mary', 'ff', '33').to_dict())
+    user_list.append(User(_get_id(), 'mik', 'mm', '11', '123 main st', 'teacher').to_dict())
+    user_list.append(User(_get_id(), 'john', 'dd', '22', '123 main st', 'admin').to_dict())
+    user_list.append(User(_get_id(), 'mary', 'ff', '33', '123 main st', 'student').to_dict())
 
     _scl.users.insert_many(user_list)
 
