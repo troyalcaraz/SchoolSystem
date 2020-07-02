@@ -11,14 +11,13 @@ _secret_key = '101010101unique'
 class User:
     '''A class that defines how Users should behave'''
     def __init__(self, db_id=-1, fullname='', username='', password='',
-                 address='', email=''):
+                 address='', role=''):
         self._id = db_id
         self.fullname = fullname
         self.username = username
         self.password = password
         self.address = address
-        self.email = email
-        # self.role = role not sure role is needed
+        self.role = role
 
     def get_id(self):
         '''Returns the id of the user'''
@@ -46,9 +45,9 @@ class User:
         '''Returns the dictionary representation of itself'''
         return self.__dict__
 
-    # def get_role(self):
-    #     '''returns the role of the user'''
-    #     return self.role
+    def get_role(self):
+        '''returns the role of the user'''
+        return self.role
 
     @classmethod
     def from_dict(cls, input_user):
@@ -57,42 +56,42 @@ class User:
         user.__dict__.update(input_user)
         return user
 
-    def encode_auth_token(self):
-        ''' Generate an authentication token for this user '''
-        try:
-            payload = {
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=1),
-                'iat': datetime.datetime.utcnow(),
-                'sub': self._id
-            }
-            _log.debug("payload set")
-            return jwt.encode(payload, _secret_key, algorithm='HS256')
-        except Exception as e:
-            _log.exception('Encode failed.')
-            return e
+    # def encode_auth_token(self):
+    #     ''' Generate an authentication token for this user '''
+    #     try:
+    #         payload = {
+    #             'exp': datetime.datetime.utcnow() + datetime.timedelta(days=1),
+    #             'iat': datetime.datetime.utcnow(),
+    #             'sub': self._id
+    #         }
+    #         _log.debug("payload set")
+    #         return jwt.encode(payload, _secret_key, algorithm='HS256')
+    #     except Exception as e:
+    #         _log.exception('Encode failed.')
+    #         return e
 
-    @staticmethod
-    def decode_auth_token(auth_token):
-        ''' Decode the auth token to receive the id of user '''
-        try:
-            payload = jwt.decode(auth_token, _secret_key)
-            return payload['sub']
-        except jwt.ExpiredSignatureError:
-            return 'Token expired. please login again.'
-        except jwt.InvalidTokenError:
-            return 'Token invalid. Please login.'
+    # @staticmethod
+    # def decode_auth_token(auth_token):
+    #     ''' Decode the auth token to receive the id of user '''
+    #     try:
+    #         payload = jwt.decode(auth_token, _secret_key)
+    #         return payload['sub']
+    #     except jwt.ExpiredSignatureError:
+    #         return 'Token expired. please login again.'
+    #     except jwt.InvalidTokenError:
+    #         return 'Token invalid. Please login.'
 
 class Admin(User):
     '''A class that defines how Admins should behave'''
     def __init__(self, db_id=-1, fullname='', username='', password='',
-                 address='', email=''):
-        super(). __init__(db_id, fullname, username, password, address, email)
+                 address='', role=''):
+        super(). __init__(db_id, fullname, username, password, address, role)
 
 class Teacher(User):
     '''A class that defines how Teachers should behave'''
-    def __init__(self, db_id=-1, fullname='', username='', password='',
+    def __init__(self, db_id=-1, fullname='', username='', password='', role='',
                  substitute=False, ):
-        super(). __init__(db_id, fullname, username, password)
+        super(). __init__(db_id, fullname, username, password, role)
         self.assigned_students = []
         self.courses = []
         self.substitute = substitute
@@ -100,11 +99,11 @@ class Teacher(User):
 
 class Student(User):
     '''A class that defines how Students should behave'''
-    def __init__(self, db_id=-1, fullname='', username='', password='',
+    def __init__(self, db_id=-1, fullname='', username='', password='', role='',
                  absences=0, grade_level='', age=0):
-        super(). __init__(db_id, fullname, username, password)
+        super(). __init__(db_id, fullname, username, password, role)
         self.grades = []
-        self.courses = []
+        self.courses_taken = []
         self.absences = absences
         self.grade_level = grade_level
         self.age = age
