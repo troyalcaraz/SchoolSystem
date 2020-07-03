@@ -51,7 +51,7 @@ def add_user(user):
                 increment += 1
                 _scl.users.insert_one(user)
                 return user
-            except:            
+            except:
                 pass
 
 

@@ -74,13 +74,36 @@ class Admin extends Component {
         <center>
           <div id="title"><h1>School System - Admin</h1></div>
           <div id="content">
-            Username: <input type='text' name="username" value={this.state.username} onChange={e => this.handleChange(e)}/><br/>
-            Fullname: <input type='text' name="fullname" value={this.state.fullname} onChange={e => this.handleChange(e)}/><br/>
-            Password: <input type='password' name="password" value={this.state.password} onChange={e => this.handleChange(e)}/><br/>
-            Address: <input type='text' name="address"value={this.state.address} onChange={e => this.handleChange(e)}/><br/>
-            Role: <input type='text' name="role" value={this.state.role} onChange={e => this.handleChange(e)}/><br/>
+            <table align="center">
+              <tr>
+                <td>Username:</td>
+                <td><input type='text' name="username" value={this.state.username} onChange={e => this.handleChange(e)}/></td>
+              </tr>
+              <tr>
+                <td>Fullname:</td>
+                <td><input type='text' name="fullname" value={this.state.fullname} onChange={e => this.handleChange(e)}/></td>
+              </tr>
+              <tr>
+                <td>Password:</td>
+                <td> <input type='password' name="password" value={this.state.password} onChange={e => this.handleChange(e)}/></td>
+              </tr>
+              <tr>
+                <td>Address:</td>
+                <td><input type='text' name="address"value={this.state.address} onChange={e => this.handleChange(e)}/></td>
+              </tr>
+              <tr>
+                <td>Role:</td>
+                <td>
+                  <select name="role"  onChange={e => this.handleChange(e)} value={this.state.role}>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="admin">Admin</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
             <button onClick={this.add_user}>Add the user</button>
-            <button onClick={this.toAdminMain}>Log Out</button>
+            <button onClick={this.toAdminMain}>Back</button>
             <br></br><br></br>
             {this.state.adduser}
           </div>
@@ -95,7 +118,7 @@ class Admin extends Component {
             <h1>Admin</h1>
             
             <button id="adduserbtn" onClick={this.to_add_user}>Add User </button>
-            <button id="to_main" onClick={this.to_main}>back </button>
+            <button id="to_main" onClick={this.to_main}>Log out </button>
           </div>
         </center>
       );
