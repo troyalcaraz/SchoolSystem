@@ -970,3 +970,632 @@ TypeError: The view function did not return a valid response. The function eithe
 2020-07-01 18:37:42,267 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
 2020-07-01 18:37:42,270 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
 2020-07-01 18:37:42,292 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:42] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-02 18:14:44,998 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-02 18:14:51,458 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:14:51] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:14:51,474 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:14:58,928 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:14:58] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:14:58,944 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:15:21,788 - __main__:1891 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 22, in login
+    user = db.login(temp)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 25, in login
+    user_dict = _scl.users.find_one(query_dict)
+  File "c:\python38\lib\site-packages\pymongo\collection.py", line 1273, in find_one
+    for result in cursor.limit(-1):
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1050, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1810, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1763, in __start_session
+    server_session = self._get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1796, in _get_server_session
+    return self._topology.get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 482, in get_server_session
+    self._select_servers_loop(
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 208, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+2020-07-02 18:15:21,891 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:15:21] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-02 18:15:29,434 - __main__:1891 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 22, in login
+    user = db.login(temp)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 25, in login
+    user_dict = _scl.users.find_one(query_dict)
+  File "c:\python38\lib\site-packages\pymongo\collection.py", line 1273, in find_one
+    for result in cursor.limit(-1):
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1050, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1810, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1763, in __start_session
+    server_session = self._get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1796, in _get_server_session
+    return self._topology.get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 482, in get_server_session
+    self._select_servers_loop(
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 208, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+2020-07-02 18:15:29,456 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:15:29] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-02 18:19:43,418 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:19:43] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:19:43,429 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:19:53,108 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:19:53] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:19:53,125 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:20:13,528 - __main__:1891 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 22, in login
+    user = db.login(temp)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 25, in login
+    user_dict = _scl.users.find_one(query_dict)
+  File "c:\python38\lib\site-packages\pymongo\collection.py", line 1273, in find_one
+    for result in cursor.limit(-1):
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1050, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1810, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1763, in __start_session
+    server_session = self._get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1796, in _get_server_session
+    return self._topology.get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 482, in get_server_session
+    self._select_servers_loop(
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 208, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+2020-07-02 18:20:13,556 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:20:13] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-02 18:20:23,258 - __main__:1891 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 22, in login
+    user = db.login(temp)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 25, in login
+    user_dict = _scl.users.find_one(query_dict)
+  File "c:\python38\lib\site-packages\pymongo\collection.py", line 1273, in find_one
+    for result in cursor.limit(-1):
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1050, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1810, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1763, in __start_session
+    server_session = self._get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1796, in _get_server_session
+    return self._topology.get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 482, in get_server_session
+    self._select_servers_loop(
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 208, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+2020-07-02 18:20:23,307 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:20:23] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-02 18:22:34,507 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:22:34] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:22:34,517 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:23:04,537 - __main__:1891 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 22, in login
+    user = db.login(temp)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 25, in login
+    user_dict = _scl.users.find_one(query_dict)
+  File "c:\python38\lib\site-packages\pymongo\collection.py", line 1273, in find_one
+    for result in cursor.limit(-1):
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1050, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1810, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1763, in __start_session
+    server_session = self._get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1796, in _get_server_session
+    return self._topology.get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 482, in get_server_session
+    self._select_servers_loop(
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 208, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+2020-07-02 18:23:04,560 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:23:04] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-02 18:30:42,869 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:30:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:30:42,877 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:31:13,342 - __main__:1891 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 22, in login
+    user = db.login(temp)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 25, in login
+    user_dict = _scl.users.find_one(query_dict)
+  File "c:\python38\lib\site-packages\pymongo\collection.py", line 1273, in find_one
+    for result in cursor.limit(-1):
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1050, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1810, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1763, in __start_session
+    server_session = self._get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1796, in _get_server_session
+    return self._topology.get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 482, in get_server_session
+    self._select_servers_loop(
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 208, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+2020-07-02 18:31:13,357 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:31:13] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-02 18:39:53,024 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-02 18:40:10,201 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:40:10] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:40:10,211 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:40:40,466 - __main__:1891 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 22, in login
+    user = db.login(temp)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 25, in login
+    user_dict = _scl.users.find_one(query_dict)
+  File "c:\python38\lib\site-packages\pymongo\collection.py", line 1273, in find_one
+    for result in cursor.limit(-1):
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1050, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1810, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1763, in __start_session
+    server_session = self._get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1796, in _get_server_session
+    return self._topology.get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 482, in get_server_session
+    self._select_servers_loop(
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 208, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+2020-07-02 18:40:40,488 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:40:40] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-02 18:41:12,771 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-02 18:41:20,136 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:41:20] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:41:20,156 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:41:50,396 - __main__:1891 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 22, in login
+    user = db.login(temp)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 25, in login
+    user_dict = _scl.users.find_one(query_dict)
+  File "c:\python38\lib\site-packages\pymongo\collection.py", line 1273, in find_one
+    for result in cursor.limit(-1):
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1050, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1810, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1763, in __start_session
+    server_session = self._get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1796, in _get_server_session
+    return self._topology.get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 482, in get_server_session
+    self._select_servers_loop(
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 208, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+2020-07-02 18:41:50,420 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:41:50] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-02 18:42:18,809 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:42:18] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:42:18,824 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:42:33,316 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-02 18:42:38,258 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:42:38] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:42:38,271 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:43:12,054 - SchoolSystem.data.mongo:18 - ERROR - Could not connect to Mongo
+Traceback (most recent call last):
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 16, in <module>
+    _scl = pymongo.MongoClient('mongodb+srv://troyalcaraz:Football54%24@cluster0-mri8h.mongodb.net/test?authSource=admin&replicaSet=Cluster0-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true').project2
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 619, in __init__
+    res = uri_parser.parse_uri(
+  File "c:\python38\lib\site-packages\pymongo\uri_parser.py", line 390, in parse_uri
+    raise ConfigurationError('The "dnspython" module must be '
+pymongo.errors.ConfigurationError: The "dnspython" module must be installed to use mongodb+srv:// URIs
+2020-07-02 18:47:10,602 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-02 18:47:20,152 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:47:20] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 18:47:20,163 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 18:47:50,222 - __main__:1891 - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 22, in login
+    user = db.login(temp)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 25, in login
+    user_dict = _scl.users.find_one(query_dict)
+  File "c:\python38\lib\site-packages\pymongo\collection.py", line 1273, in find_one
+    for result in cursor.limit(-1):
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "c:\python38\lib\site-packages\pymongo\cursor.py", line 1050, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1810, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1763, in __start_session
+    server_session = self._get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\mongo_client.py", line 1796, in _get_server_session
+    return self._topology.get_server_session()
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 482, in get_server_session
+    self._select_servers_loop(
+  File "c:\python38\lib\site-packages\pymongo\topology.py", line 208, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+2020-07-02 18:47:50,243 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 18:47:50] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-07-02 19:08:51,919 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-02 19:08:59,309 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 19:08:59] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-02 19:08:59,321 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-02 19:09:00,175 - werkzeug:113 - INFO - 127.0.0.1 - - [02/Jul/2020 19:09:00] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 06:13:18,300 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 06:13:18] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 06:13:18,567 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 06:13:19,384 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 06:13:19] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 06:18:42,889 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 06:18:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 06:18:42,910 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 06:18:43,004 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 06:18:43] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 06:22:12,419 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 06:22:12] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 06:22:12,438 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 06:22:12,535 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 06:22:12] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 06:46:16,533 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 06:46:16] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 06:46:16,549 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 06:46:16,644 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 06:46:16] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 07:03:56,164 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 07:03:56] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 07:03:56,185 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 07:03:56,280 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 07:03:56] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 07:20:30,635 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 07:20:30] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 07:20:30,643 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 07:20:30,741 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 07:20:30] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 07:37:25,322 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 07:37:25] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 07:37:25,327 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 07:37:25,420 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 07:37:25] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 07:38:55,699 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 07:38:55] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 07:38:55,704 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 07:38:55,800 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 07:38:55] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 11:05:21,805 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:05:21] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:05:21,810 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:05:21] "[31m[1mPUT /users HTTP/1.1[0m" 405 -
+2020-07-03 11:13:48,773 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:13:48] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:13:48,777 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 11:13:48,875 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:13:48] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 11:14:21,575 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:14:21] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:14:21,581 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:14:21] "[31m[1mPUT /users HTTP/1.1[0m" 405 -
+2020-07-03 11:14:36,154 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:14:53,455 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:14:53] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:14:53,459 - __main__:1891 - ERROR - Exception on /users [PUT]
+Traceback (most recent call last):
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-07-03 11:14:53,474 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:14:53] "[35m[1mPUT /users HTTP/1.1[0m" 500 -
+2020-07-03 11:18:08,409 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:18:22,647 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:18:22] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:18:22,654 - __main__:1891 - ERROR - Exception on /users [PUT]
+Traceback (most recent call last):
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-07-03 11:18:22,668 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:18:22] "[35m[1mPUT /users HTTP/1.1[0m" 500 -
+2020-07-03 11:18:54,399 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:18:55,952 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:18:55] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:18:55,966 - __main__:1891 - ERROR - Exception on /users [PUT]
+Traceback (most recent call last):
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 42, in login
+    user = db.add_user(request.json)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 37, in add_user
+    query_dict = {'username': user.username}
+AttributeError: 'dict' object has no attribute 'username'
+2020-07-03 11:18:55,974 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:18:55] "[35m[1mPUT /users HTTP/1.1[0m" 500 -
+2020-07-03 11:20:03,351 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:20:04,319 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:20:04] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:20:04,325 - __main__:1891 - ERROR - Exception on /users [PUT]
+Traceback (most recent call last):
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 44, in login
+    user = db.add_user(request.json)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 37, in add_user
+    query_dict = {'username': user.username}
+AttributeError: 'dict' object has no attribute 'username'
+2020-07-03 11:20:04,344 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:20:04] "[35m[1mPUT /users HTTP/1.1[0m" 500 -
+2020-07-03 11:20:45,840 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:20:46,632 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:20:46] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:20:46,638 - __main__:1891 - ERROR - Exception on /users [PUT]
+Traceback (most recent call last):
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 44, in login
+    user = db.add_user(request.json)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 38, in add_user
+    query_dict = {'username': user.username}
+AttributeError: 'dict' object has no attribute 'username'
+2020-07-03 11:20:46,657 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:20:46] "[35m[1mPUT /users HTTP/1.1[0m" 500 -
+2020-07-03 11:21:13,928 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:21:14,656 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:21:14] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:21:15,449 - __main__:1891 - ERROR - Exception on /users [PUT]
+Traceback (most recent call last):
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 44, in login
+    user = db.add_user(request.json)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 43, in add_user
+    user._id = 1
+AttributeError: 'dict' object has no attribute '_id'
+2020-07-03 11:21:15,456 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:21:15] "[35m[1mPUT /users HTTP/1.1[0m" 500 -
+2020-07-03 11:21:43,416 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:21:44,517 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:21:44] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:22:50,260 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:22:51,358 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:22:51] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:24:41,380 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:24:43,328 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:24:43] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:25:37,813 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:25:39,597 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:25:39] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:26:25,639 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:26:28,158 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:26:28] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:26:28,931 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:26:28] "[31m[1mPUT /users HTTP/1.1[0m" 401 -
+2020-07-03 11:26:50,118 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:26:50,827 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:26:50] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:26:51,624 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:26:51] "[31m[1mPUT /users HTTP/1.1[0m" 401 -
+2020-07-03 11:27:34,440 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:27:35,706 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:27:35] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:28:28,120 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:28:39,692 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:28:39] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:28:40,793 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:28:40] "[31m[1mPUT /users HTTP/1.1[0m" 401 -
+2020-07-03 11:29:29,293 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:29:32,109 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:29:32] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:29:32,879 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:29:32] "[31m[1mPUT /users HTTP/1.1[0m" 401 -
+2020-07-03 11:29:40,811 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:29:40] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:29:41,303 - __main__:1891 - ERROR - Exception on /users [PUT]
+Traceback (most recent call last):
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 47, in login
+    return user.to_dict(), 200
+AttributeError: 'dict' object has no attribute 'to_dict'
+2020-07-03 11:29:41,315 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:29:41] "[35m[1mPUT /users HTTP/1.1[0m" 500 -
+2020-07-03 11:30:20,209 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:30:45,279 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:30:45] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:30:46,393 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:30:46] "[37mPUT /users HTTP/1.1[0m" 200 -
+2020-07-03 11:34:23,517 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:34:23] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:34:24,031 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:34:24] "[37mPUT /users HTTP/1.1[0m" 200 -
+2020-07-03 11:35:19,763 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:35:19] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:35:20,358 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:35:20] "[37mPUT /users HTTP/1.1[0m" 200 -
+2020-07-03 11:38:59,085 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:38:59] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:38:59,099 - __main__:1891 - ERROR - Exception on /users [PUT]
+Traceback (most recent call last):
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\gmrur\programming\python\projecttwo\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\main.py", line 44, in login
+    user = db.add_user(request.json)
+  File "C:\Users\gmrur\Programming\Python\ProjectTwo\SchoolSystem\data\mongo.py", line 38, in add_user
+    query_dict = {'username': user['username']}
+KeyError: 'username'
+2020-07-03 11:38:59,111 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:38:59] "[35m[1mPUT /users HTTP/1.1[0m" 500 -
+2020-07-03 11:39:16,196 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:39:16] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:39:17,224 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:39:17] "[37mPUT /users HTTP/1.1[0m" 200 -
+2020-07-03 11:40:25,961 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-03 11:42:46,100 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:42:46] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:42:47,252 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:42:47] "[37mPUT /users HTTP/1.1[0m" 200 -
+2020-07-03 11:50:12,324 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:50:12] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:50:12,332 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 11:50:12,428 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:50:12] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 11:51:48,798 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:51:48] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 11:51:48,806 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 11:51:48,903 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 11:51:48] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 12:00:17,013 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 12:00:17] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 12:00:17,021 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 12:00:17,114 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 12:00:17] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-03 12:31:13,666 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 12:31:13] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 12:31:14,159 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 12:31:14] "[37mPUT /users HTTP/1.1[0m" 200 -
+2020-07-03 12:43:07,655 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 12:43:07] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-03 12:43:07,664 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-03 12:43:07,891 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 12:43:07] "[37mPOST /users HTTP/1.1[0m" 200 -
