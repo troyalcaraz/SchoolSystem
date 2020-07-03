@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import styles from '../../App.css';
+
+
+
 import axios from 'axios'
 import styles from '../../App.css';
 

@@ -26,6 +26,10 @@ class User:
         '''Sets the id of the user'''
         self._id = _id
 
+    def get_role(self):
+        '''returns the role of the user'''
+        return self.role
+
     def login(self, username, password):
         '''Returns true id username and password match existing'''
         return self.username == username and self.password == password
@@ -43,10 +47,6 @@ class User:
     def to_dict(self):
         '''Returns the dictionary representation of itself'''
         return self.__dict__
-
-    def get_role(self):
-        '''returns the role of the user'''
-        return self.role
 
     @classmethod
     def from_dict(cls, input_user):
