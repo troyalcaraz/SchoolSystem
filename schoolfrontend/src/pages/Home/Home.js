@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Student from '../Student/Student'
 import axios from 'axios'
+import StudentService from '../../service/student.service'
 
 class Home extends Component {
+  studentService = new StudentService();
   constructor(props){
     super(props);
     this.URI = 'http://localhost:5000';
@@ -42,9 +43,12 @@ class Home extends Component {
            window.location = "/Teacher"
          }
          else if (res.data.role === 'student'){
+          this.studentService.getStudentGrades(res.data.username).then(res => {
+            console.log('Username: ' + res);
+            //this.props.queryMedia(res.data);
+          })
           alert('you are a student')
           window.location = "/Student"
-
         }
         else {
           alert('you are a NUN')

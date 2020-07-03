@@ -11,6 +11,18 @@ app = Flask("__main__")
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 # app.json_encoder = UserEncoder
 
+@app.route('/student', methods={'GET'})
+def render_grades():
+    if request.method == 'GET':
+        _log.debug('In GET')
+        _log.debug(request.json['username'])
+        temp = request.json['username']
+        _log.debug(temp)
+        grades = db.get_grades_by_username(temp)
+        _log.debug(grades)
+        if grades:
+            return grades, 200
+
 @app.route('/users', methods={'GET', 'POST', 'DELETE'})
 def login():
     if request.method == 'POST':
