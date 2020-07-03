@@ -11,7 +11,7 @@ app = Flask("__main__")
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 # app.json_encoder = UserEncoder
 
-@app.route('/users', methods={'GET', 'POST', 'DELETE'})
+@app.route('/users', methods={'GET', 'POST', 'DELETE', 'PUT'})
 def login():
     if request.method == 'POST':
         _log.debug("In POST")
@@ -36,4 +36,13 @@ def login():
     #         _log.debug(User.decode_auth_token(auth_token))
     #         return jsonify(db.get_user_by_id(User.decode_auth_token(auth_token))), 200
     #     else:
-    #         return {}, 401
+    #         ret
+    if request.method == 'PUT':
+        _log.debug('in add_user')
+        _log.debug('user:')
+        _log.debug(request.json)
+        user = db.add_user(request.json)
+        if user:
+            _log.debug('added user')
+            return user, 200
+        return {}, 401

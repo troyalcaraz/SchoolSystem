@@ -38,24 +38,34 @@
 }
 
 body {
-  background-color: #06A0FA;
+  background-color: #000000;
 }
 
-#content {
+#content, #title{
   width: 800px;
   margin: 10px;
   text-align: center;
-  background-color: coral;
-  box-shadow: 0px 0px 200px 10px #04507c;
-  -moz-box-shadow: 5px 5px 10px #04507c;
-  -webkit-box-shadow: 5px 5px 10px #04507c;
-  box-shadow: 5px 5px 10px #04507c;
+  background-color: rgb(125, 214, 132);
+  box-shadow: 0px 0px 200px 10px #05612e;
+  -moz-box-shadow: 5px 5px 10px #05612e;
+  -webkit-box-shadow: 5px 5px 10px #05612e;
+  box-shadow: 5px 5px 10px #05612e;
   border-radius: 15px;
 }
 
-input, select{
+#content {
+  height: 400px;
+}
+
+input, select, button{
   -moz-box-shadow: inset -3px -3px 10px #eee;
   -webkit-box-shadow: inset -3px -3px 10px #eee;
   box-shadow: inset -3px -3px 10px #eee;
+  border-radius: 15px;
+}
+
+h1 {
+  text-shadow: #000000 -1px -1px 0, -25px 5px 5px rgba(206,89,55,0);
+  color: #ffffff;
   border-radius: 15px;
 }
