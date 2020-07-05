@@ -6,36 +6,31 @@ import React, { Component } from "react";
 class Student extends Component {
   constructor(props){
     super(props);
-    this.state = {user: null};
   }
 
   state = {
-
-    user: ""
+    user: {username: '', grades: []}
     
   };
 
-  showGrades() {
-    this.state.user = {username: 'Troy', grades: [{class: 'Science', grade: 'A'}, {class: 'PE', grade: 'B'}, {class: 'History', grade: 'C'}, {class: 'English', grade: 'D'}, {class: 'Art', grade: 'F'}]}
-
-    return (
-      <>
-        <h1> {this.state.user.username} </h1>
-        <div>
-          {this.props.user.grades.map((grade) => 
-            <p>{grade.class} : {grade.grade}</p>
-          )}
-        </div>
-      </>
-    )
+  handleShowGrades = () => {
+    this.setState({
+      user: {username: 'Troy', grades: [{class: 'Science', grade: 'A'}, {class: 'PE', grade: 'B'}, {class: 'History', grade: 'C'}, {class: 'English', grade: 'D'}, {class: 'Art', grade: 'F'}]}
+    })
   }
-
+  
   render() {
 
     return (
 
       <>
-        <button id="gradebutton" onClick={this.showGrades}>Grades</button>
+        <h1> {this.state.user.username} </h1>
+        <div>
+            {this.state.user.grades.map(grade => 
+              <p key={grade.class}>{grade.class} : {grade.grade}</p>
+            )}
+          </div>
+        <button id="gradebutton" onClick={this.handleShowGrades}>Grades</button>
       </>
      
     );
