@@ -9,6 +9,7 @@ import pymongo
 
 from SchoolSystem.users.model import User, Admin, Teacher, Student
 from SchoolSystem.data.logger import get_logger
+from bson.json_util import dumps
 
 _log = get_logger(__name__)
 
@@ -32,6 +33,20 @@ def _get_id():
                                             {'$inc': {'count': 1}},
                                             return_document=pymongo.ReturnDocument.AFTER)['count']
 
+def get_students():
+    dict_list = _scl.users.find({'role': 'student'})
+    return [User.from_dict(user) for user in dict_list]
+
+def get_teachers():
+    dict_list = _scl.users.find({'role': 'teacher'})
+    return [User.from_dict(user) for user in dict_list]
+
+
+def update_student(username, newData):
+    myquery = {"username": username}
+    result = _scl.users.update_one(myquery, {'$set': newData})
+
+  
 if __name__ == '__main__':
     _log.info('Running Mongo script: dropping collections from project2 database')
     _log.info(_scl.list_collection_names())
