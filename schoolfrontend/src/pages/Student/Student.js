@@ -5,7 +5,7 @@ import axios from 'axios';
 class Student extends Component {
   constructor(props){
     super(props);
-    //this.state = props.user
+    this.user_ref = React.createRef()
   }
 
   state = {
@@ -14,12 +14,15 @@ class Student extends Component {
   };
   
   handleShowGrades = () => {
-    axios.post(this.URI + '/users', user)
-    .then(res => 
-      this.setState({
-        user: {res.data}
+    const user = {"username": this.user_ref.current.value}
+
+    axios.post('http://localhost:5000/users', user).then(res => 
+      {
+        console.log(res.data)
+        this.setState({
+          user: res.data
+        })
       })
-    )
   }
   
   handleRemoveGrades = () => {
