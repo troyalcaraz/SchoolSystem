@@ -12,12 +12,14 @@ class Student extends Component {
     user: {fullname: '', username: '', grades: []}
     
   };
-
   
   handleShowGrades = () => {
-    this.setState({
-      user: {fullname: 'Troy', username: 'ff', grades: [{class: 'Science', grade: 'A+'}]}
-    })
+    axios.post(this.URI + '/users', user)
+    .then(res => 
+      this.setState({
+        user: {res.data}
+      })
+    )
   }
   
   handleRemoveGrades = () => {
@@ -37,6 +39,8 @@ class Student extends Component {
               <p key={grade.class}>{grade.class} : {grade.grade}</p>
             )}
         </div>
+        <p>
+        <input type="text" ref={this.user_ref} name="username"/></p>
         <p>
         <button id="showgrades" onClick={this.handleShowGrades}>Grades</button></p>
         <p>

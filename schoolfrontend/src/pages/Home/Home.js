@@ -43,8 +43,6 @@ class Home extends Component {
          }
          else if (res.data.role === 'student'){
           console.log(res.data)
-          this.student = JSON.stringify(res.data)
-          alert(this.student)
           alert('you are a student')
           window.location = "/Student"
         }
@@ -70,9 +68,6 @@ class Home extends Component {
             <p>Password</p>
             <input type="password" name="password"/><br></br>
             <button id="loginbutton" onClick={this.login}>Log In</button>
-          </div>
-          <div>
-            <Student/>
           </div>
         </>
       );
