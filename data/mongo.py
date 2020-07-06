@@ -23,8 +23,9 @@ def get_user_by_username(username):
 
 def get_grades_by_username(username):
     user_dict = _scl.users.find_one({'username': username})
+    user_grades = Student.from_dict(user_dict).grades
     grades = []
-    for grade in user_dict.grades:
+    for grade in user_grades:
         grades.append(grade)
     return grades
 
