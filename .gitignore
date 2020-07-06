@@ -22,23 +22,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-<<<<<<< Updated upstream
-=======
 **/__pycache__/
 **/.vscode/
 **/*.log
 **/.vs/
 
->>>>>>> Stashed changes
 /Include/
 /Lib/
 /Scripts/
 pyvenv.cfg
-
-<<<<<<< Updated upstream
-**/__pycache__/
-**/.vscode/
-**/*.log
-**/.vs/
-=======
->>>>>>> Stashed changes
