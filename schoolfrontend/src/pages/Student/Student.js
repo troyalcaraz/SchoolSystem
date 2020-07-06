@@ -1,60 +1,54 @@
 import React, { Component } from "react";
 import axios from 'axios';
-//import Home from '../Home/Home';
 
 
 class Student extends Component {
   constructor(props){
     super(props);
-    this.URI = 'http://localhost:5000/student';
-    this.state = {user: null};
+    this.user_ref = React.createRef()
   }
 
   state = {
-
-    user: {username: '', grades: []}
+    user: {fullname: '', username: '', grades: []}
     
   };
+  
+  handleShowGrades = () => {
+    const user = {"username": this.user_ref.current.value}
 
-  showGrades = () => {
-    console.log(this.state)
-    /*this.setState({user: {username: 'Troy',
-                          grades: [{class: 'Science', grade: 'A'},
-                                   {class: 'PE', grade: 'B'},
-                                   {class: 'History', grade: 'C'},
-                                   {class: 'English', grade: 'D'},
-                                   {class: 'Art', grade: 'F'}
-                                  ]
-                         }
-                  })*/
-    console.log(this.state)
-
-    /*axios.post(this.URI).then(res => {
-      console.log(res.data.role);
-    })*/
-
-    console.log(this.state.username, this.state.grades)
-
-    return (
-      <>
-        <h1> {this.state.username} </h1>
-        <div>
-          {this.state.grades.map((grade) => 
-            <p>{grade.class} : {grade.grade}</p>
-          )}
-        </div>
-      </>
-    )
+    axios.post('http://localhost:5000/users', user).then(res => 
+      {
+        console.log(res.data)
+        this.setState({
+          user: res.data
+        })
+      })
   }
+  
+  handleRemoveGrades = () => {
+    this.setState({
+      user: {fullname: '', username: '', grades: []}
+    })
+  } 
 
   render() {
 
     return (
 
       <>
-        <button id="gradebutton" onClick={this.setState({user: {username: 'blah', grades: []}})}>Grades</button>
+        <h1> {this.state.user.fullname} </h1>
+        <div>
+            {this.state.user.grades.map(grade => 
+              <p key={grade.class}>{grade.class} : {grade.grade}</p>
+            )}
+        </div>
+        <p>
+        <input type="text" ref={this.user_ref} name="username"/></p>
+        <p>
+        <button id="showgrades" onClick={this.handleShowGrades}>Grades</button></p>
+        <p>
+        <button id="removegrades" onClick={this.handleRemoveGrades}>Remove</button></p>
       </>
-     
     );
   }
 }

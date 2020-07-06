@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import axios from 'axios'
-import StudentService from '../../service/student.service'
+import Student from '../Student/Student'
 
 class Home extends Component {
-  studentService = new StudentService();
   constructor(props){
     super(props);
     this.URI = 'http://localhost:5000';
@@ -43,10 +42,7 @@ class Home extends Component {
            window.location = "/Teacher"
          }
          else if (res.data.role === 'student'){
-          this.studentService.getStudentGrades(res.data.username).then(res => {
-            console.log('Username: ' + res);
-            //this.props.queryMedia(res.data);
-          })
+          console.log(res.data)
           alert('you are a student')
           window.location = "/Student"
         }
@@ -65,6 +61,7 @@ class Home extends Component {
     }
     else {
       return (
+        <>
           <div id="content">
             <p>Username</p>
             <input type="text" ref={this.user_ref} name="username"/>
@@ -72,6 +69,7 @@ class Home extends Component {
             <input type="password" name="password"/><br></br>
             <button id="loginbutton" onClick={this.login}>Log In</button>
           </div>
+        </>
       );
     }
   }

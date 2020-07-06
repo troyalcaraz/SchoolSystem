@@ -7,21 +7,25 @@ import SchoolSystem.data.mongo as db
 
 _log = get_logger(__name__)
 
-app = Flask("__main__")
+app = Flask(__name__)
+_log.debug(app)
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 # app.json_encoder = UserEncoder
 
-@app.route('/student', methods={'GET'})
-def render_grades():
-    if request.method == 'GET':
-        _log.debug('In GET')
+@app.route('/student', methods={'GET', 'POST'})
+def get_student():
+    if request.method == 'POST':
+        _log.debug(app)
         _log.debug(request.json['username'])
         temp = request.json['username']
         _log.debug(temp)
-        grades = db.get_grades_by_username(temp)
-        _log.debug(grades)
-        if grades:
-            return grades, 200
+        user = db.get_user_by_username()
+        if user:
+            return user, 200
+        else:
+            return {}, 401
+    else:
+        _log.debug('In Post')
 
 @app.route('/users', methods={'GET', 'POST', 'DELETE'})
 def login():
