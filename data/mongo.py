@@ -54,7 +54,7 @@ if __name__ == '__main__':
     user_list = []
     user_list.append(User(_get_id(), 'mik', 'mm', '11', '123 main st', 'teacher').to_dict())
     user_list.append(User(_get_id(), 'john', 'dd', '22', '123 main st', 'admin').to_dict())
-    user_list.append(Student(_get_id(), 'mary', 'ff', '33', '123 main st', 'student', [{'class': 'Art', 'grade': 'A'}]).to_dict())
+    user_list.append(Student(_get_id(), 'mary', 'ff', '33', '123 main st', 'student', [{'class': 'Art', 'grade': 'A'}, {'class': 'Biology', 'grade': 'A+'}]).to_dict())
 
     _scl.users.insert_many(user_list)
 
