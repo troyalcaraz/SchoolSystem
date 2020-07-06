@@ -18,6 +18,12 @@ except:
     _log.exception('Could not connect to Mongo')
     raise
 
+def get_users():
+    '''Read all the users from the collection'''
+    _log.info('Attempting to retrieve all users from database')
+    dict_list = _scl.users.find()
+    return [User.from_dict(user) for user in dict_list]
+
 def login(username):
     '''A function that takes in a username and returns a user object'''
     _log.info('Attempting to retrieve user from database')
@@ -25,6 +31,12 @@ def login(username):
     user_dict = _scl.users.find_one(query_dict)
     _log.debug(user_dict)
     return User.from_dict(user_dict) if user_dict else None
+
+def remove_user(username: str, _id):
+    '''Removes a user from the database'''
+    _log.info('Attempting to remove user from database')
+    query = {"id": _id}
+    _scl['users'].remove(query)
 
 def _get_id():
     '''Retrieves the next id in the database and increments it'''
