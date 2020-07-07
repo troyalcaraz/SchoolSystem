@@ -1425,3 +1425,268 @@ Traceback (most recent call last):
     " {rv.__class__.__name__}.".format(rv=rv)
 TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
 2020-07-06 18:31:33,704 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:31:33] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:36:06,446 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:36:09,346 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:36:10,107 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:36:10] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:36:12,965 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:36:12] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:36:12,967 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:36:13,066 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:36:13,067 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:36:13,068 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:36:13] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:37:53,576 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:37:56,014 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:37:56,774 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:37:56] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:37:58,470 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:37:58] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:37:58,473 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 54, in login
+    _log.infor(request.json)
+AttributeError: 'Logger' object has no attribute 'infor'
+2020-07-06 18:37:58,479 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:37:58] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:38:14,172 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:38:17,027 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:38:17,793 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:38:17] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:38:18,794 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:38:18] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:38:18,796 - SchoolSystem.main:54 - INFO - None
+2020-07-06 18:38:18,796 - SchoolSystem.main:55 - INFO - b''
+2020-07-06 18:38:18,796 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:38:18,890 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:38:18,891 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:38:18,893 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:38:18] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:39:22,014 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:39:25,149 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:39:26,414 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:39:26] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:39:27,696 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:39:27] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:39:27,698 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 54, in login
+    _log.info(request.json['fullname'])
+TypeError: 'NoneType' object is not subscriptable
+2020-07-06 18:39:27,705 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:39:27] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:40:56,165 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:40:56,315 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:40:56] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:41:05,243 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:41:05,344 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:41:05] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:41:27,218 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:41:29,720 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:41:30,481 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:41:30] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:41:31,794 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:41:31] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:41:31,796 - SchoolSystem.main:54 - INFO - None
+2020-07-06 18:41:31,797 - SchoolSystem.main:55 - INFO - b''
+2020-07-06 18:41:31,797 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:41:31,900 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:41:31,901 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:41:31,903 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:41:31] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:43:14,750 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:43:14,848 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:43:14] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:43:28,924 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:43:29,017 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:43:29] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:43:30,482 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:43:30] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:43:30,484 - SchoolSystem.main:54 - INFO - None
+2020-07-06 18:43:30,484 - SchoolSystem.main:55 - INFO - b''
+2020-07-06 18:43:30,484 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:43:30,576 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:43:30,576 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:43:30,577 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:43:30] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:44:05,210 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:44:05,305 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:44:05] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:44:15,170 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:44:15,262 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:44:15] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:44:17,365 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:44:17] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:44:17,367 - SchoolSystem.main:54 - INFO - None
+2020-07-06 18:44:17,367 - SchoolSystem.main:55 - INFO - b''
+2020-07-06 18:44:17,367 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:44:17,456 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:44:17,456 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:44:17,457 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:44:17] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:45:53,762 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:45:53,853 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:45:53] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:45:57,915 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:45:58,007 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:45:58] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:46:00,461 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:46:00] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:46:00,463 - SchoolSystem.main:54 - INFO - None
+2020-07-06 18:46:00,463 - SchoolSystem.main:55 - INFO - b''
+2020-07-06 18:46:00,464 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:46:00,558 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:46:00,559 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:46:00,559 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:46:00] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:46:38,397 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:46:38,492 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:46:38] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:46:41,920 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:46:41] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:46:41,922 - SchoolSystem.main:54 - INFO - None
+2020-07-06 18:46:41,922 - SchoolSystem.main:55 - INFO - b''
+2020-07-06 18:46:41,922 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:46:42,014 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:46:42,015 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:46:42,016 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:46:42] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:48:29,004 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:48:29,098 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:48:29] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:48:33,876 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:48:33] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:48:33,878 - SchoolSystem.main:54 - INFO - None
+2020-07-06 18:48:33,879 - SchoolSystem.main:55 - INFO - b''
+2020-07-06 18:48:33,879 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:48:33,970 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:48:33,970 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:48:33,972 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:48:33] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:48:47,036 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:48:49,859 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:48:50,644 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:48:50] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:48:52,390 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:48:52] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:48:52,393 - SchoolSystem.main:54 - INFO - None
+2020-07-06 18:48:52,393 - SchoolSystem.main:55 - INFO - b''
+2020-07-06 18:48:52,393 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:48:52,491 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:48:52,492 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:48:52,493 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:48:52] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:50:33,655 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:51:59,753 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:52:00,560 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:52:00] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:55:46,772 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:55:49,387 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:55:50,143 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:55:50] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:56:00,341 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:56:00] "[37mOPTIONS /users/james HTTP/1.1[0m" 200 -
+2020-07-06 18:56:00,343 - flask:1892 - ERROR - Exception on /users/james [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 17, in user_remove
+    _log.infor(request.json)
+AttributeError: 'Logger' object has no attribute 'infor'
+2020-07-06 18:56:00,350 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:56:00] "[35m[1mDELETE /users/james HTTP/1.1[0m" 500 -
+2020-07-06 18:56:36,903 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:56:39,110 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:56:39,856 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:56:39] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:56:40,987 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:56:40] "[37mOPTIONS /users/james HTTP/1.1[0m" 200 -
+2020-07-06 18:56:40,989 - SchoolSystem.main:17 - INFO - None
+2020-07-06 18:56:40,990 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:56:41,079 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:56:41] "[37mDELETE /users/james HTTP/1.1[0m" 200 -

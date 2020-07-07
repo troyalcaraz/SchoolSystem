@@ -29,7 +29,7 @@ class Admin extends Component {
   remove = (event) => {
     var name = event.target.previousSibling.wholeText
     console.log(name)
-    axios.delete(this.URI + '/users', name)
+    axios.delete(this.URI + '/users/' + name)
       .then(res => console.log(res.data))
   };
 

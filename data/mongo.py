@@ -37,9 +37,9 @@ def remove_user(fullname: str):
     _log.info('Attempting to remove user from database')
     _log.debug(fullname)
     query = {"fullname": fullname}
-    success = _scl.users.find_one_and_delete(query)
-    _log.info(success)
-    return success if success else None
+    success = _scl.users.delete_one(query)
+    # _log.info(success)
+    # return success if success else None
 
 def _get_id():
     '''Retrieves the next id in the database and increments it'''
