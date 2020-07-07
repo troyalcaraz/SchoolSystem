@@ -47,6 +47,19 @@ def _get_id():
                                             {'$inc': {'count': 1}},
                                             return_document=pymongo.ReturnDocument.AFTER)['count']
 
+def get_students():
+    dict_list = _scl.users.find({'role': 'student'})
+    return [User.from_dict(user) for user in dict_list]
+
+def get_teachers():
+    dict_list = _scl.users.find({'role': 'teacher'})
+    return [User.from_dict(user) for user in dict_list]
+
+
+def update_student(username, newData):
+    myquery = {"username": username}
+    result = _scl.users.update_one(myquery, {'$set': newData})
+
 def add_user(user):
     _log.debug('querying db')
     _log.debug(user)

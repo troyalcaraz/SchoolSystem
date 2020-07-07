@@ -5,6 +5,7 @@ import json
 from SchoolSystem.data.logger import get_logger
 from SchoolSystem.users.model import User, UserEncoder
 import SchoolSystem.data.mongo as db
+import json
 
 _log = get_logger(__name__)
 
@@ -17,6 +18,26 @@ def user_remove(fullname):
     _log.info(request.json)
     user = db.remove_user(fullname)
     return {}, 200
+
+@app.route('/students', methods=['GET'])
+def students():
+    users = db.get_students()
+    value = bytes(json.dumps(users, cls=UserEncoder), 'utf-8')
+    return value, 200
+
+
+@app.route('/teachers', methods=['GET'])
+def teachers():
+    users = db.get_teachers()
+    value = bytes(json.dumps(users, cls=UserEncoder), 'utf-8')
+    return value, 200
+
+@app.route('/students/<username>', methods=['PUT'])
+def student_update(username):
+    _log.info(request.json)
+    user = db.update_student(username, request.json)
+    return {}
+
 
 
 @app.route('/users', methods={'GET', 'POST', 'DELETE', 'PUT'})
