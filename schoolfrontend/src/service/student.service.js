@@ -2,11 +2,12 @@ const axios = require('axios');
 
 class StudentService {
     constructor(){
-        this.URI = 'http://localhost:5000/student';
+        this.URI = 'http://localhost:5000/users';
     }
 
-    getStudentGrades() {
-        return axios.get(this.URI);
+    
+    login(username) {
+        return axios.post(this.URI, {'username': username})
     }
 }
 
