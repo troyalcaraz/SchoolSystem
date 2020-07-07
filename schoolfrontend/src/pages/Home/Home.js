@@ -1,70 +1,72 @@
 import React, { Component } from "react";
-import axios from 'axios'
-import Student from '../Student/Student'
+import { connect } from 'react-redux';
+import StudentService from '../../service/student.service'
 
 class Home extends Component {
   constructor(props){
     super(props);
-    this.URI = 'http://localhost:5000';
-    this.state = {user: null};
-    this.user_ref = React.createRef()
-}
+    this.handleInput = this.handleInput.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.login = this.login.bind(this);
+  }
 
-  state = {
-    style: {
-        color: "red"
-  },
-    user: ""
-  };
+  studentService = new StudentService()
 
   componentDidMount() {
 
   }
 
-  login = () => {
-    console.log(this.user_ref.current.value)
-
-    const user = {
-      "username": this.user_ref.current.value
+  handleKeyDown(e) {
+    if (e.key === 'Enter') {
+        this.login();
+    }
   }
-    axios.post(this.URI + '/users', user)
-    .then(res => {
+
+  handleInput(e) {
+    console.log(this.props)
+    this.props.dispatch( { type: 'handleUsername', username: e.target.value } )
+  }
+
+  login = () => {
+    console.log(this.props)
+    this.studentService.login(this.props.username).then(res => {
+
         console.log(res.data.role);
-         this.setState({ user: res.data.username});
-         if (res.data.role === 'admin'){
-           alert('you are an admin')
-          //  this.setState()
-          //  <Link to="../Admin/Admin.js">
+        console.log(res.data)
+        this.props.dispatch( { type: 'login', username: res.data})
+        //The user is an admin
+        if (res.data.role === 'admin'){
+          alert('you are an admin')
           window.location = "/Admin"
-         }
-         else if (res.data.role === 'teacher'){
-           alert('you are a teacher')
-           window.location = "/Teacher"
-         }
-         else if (res.data.role === 'student'){
+        }
+        //The user is a teacher
+        else if (res.data.role === 'teacher'){
+          alert('you are a teacher')
+          window.location = "/Teacher"
+        }
+        //This user is a student
+        else if (res.data.role === 'student'){
+          console.log(this.props)
           console.log(res.data)
           alert('you are a student')
           window.location = "/Student"
         }
+        //Not sure what the user is
         else {
           alert('you are a NUN')
-
         }
+
     });
   };
 
 
   render() {
-    const user = this.state.user
-    if (user) {
-        return this.state.user
-    }
-    else {
-      return (
+    return (
         <>
           <div id="content">
             <p>Username</p>
-            <input type="text" ref={this.user_ref} name="username"/>
+            <input type="text" value={this.props.username} 
+            onChange={ this.handleInput } onKeyDown={ (e) => this.handleKeyDown(e) }></input>
             <p>Password</p>
             <input type="password" name="password"/><br></br>
             <button id="loginbutton" onClick={this.login}>Log In</button>
@@ -73,6 +75,11 @@ class Home extends Component {
       );
     }
   }
+
+function mapStateToProps(state) {
+  const {user, username} = state;
+  return {user: user,
+          username: username}
 }
 
-export default Home;
+export default connect(mapStateToProps)(Home);

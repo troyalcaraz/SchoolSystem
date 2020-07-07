@@ -32,6 +32,8 @@ def get_grades_by_username(username):
 def login(username):
     '''A function that takes in a username and returns a user object'''
     _log.info('Attempting to retrieve user from database')
+    _log.debug(username)
+    _log.debug(type(username))
     query_dict = {'username': username}
     user_dict = _scl.users.find_one(query_dict)
     _log.debug(user_dict)
