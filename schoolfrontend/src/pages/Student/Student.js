@@ -20,17 +20,15 @@ class Student extends Component {
 
   render() {
     console.log(this.props)
-    if (this.props.grades) {
+    if (this.props.user) {
       return (
         <>
-          <h1> {this.props.fullname} </h1>
+          <h1> {this.props.user.fullname} </h1>
           <div>
-              {this.props.grades.map(grade => 
+              {this.props.user.grades.map(grade => 
                 <p key={grade.class}>{grade.class} : {grade.grade}</p>
               )}
           </div>
-          <p>
-          <input type="text" ref={this.user_ref} name="username"/></p>
           <p>
           <button id="showgrades" onClick={this.handleShowGrades}>Grades</button></p>
           <p>

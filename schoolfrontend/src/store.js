@@ -12,14 +12,16 @@ function schoolReducer(state = initialState, action) {
     console.log(action);
     switch(action.type) {
         case 'login':
-            return Object.assign({}, state, {username: '', user: action.user})
+            return Object.assign({}, state, {username: ''})
         case 'handleUsername':
             return Object.assign({}, state, {username: action.username})
+        case 'handleUser':
+            return Object.assign({}, state, {user: action.user})
         default:
             return state;
     }
 }
 
-let store = createStore(schoolReducer);
+const store = createStore(schoolReducer);
 
-export default store;
+export default store

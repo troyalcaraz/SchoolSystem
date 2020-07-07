@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import StudentService from '../../service/student.service'
+import Student from '../Student/Student';
+import StudentService from '../../service/student.service';
+import { Redirect } from "react-router-dom";
 
 class Home extends Component {
   constructor(props){
@@ -32,8 +34,8 @@ class Home extends Component {
     this.studentService.login(this.props.username).then(res => {
 
         console.log(res.data.role);
-        console.log(res.data)
-        this.props.dispatch( { type: 'login', username: res.data})
+        console.log(res.data.username)
+        this.props.dispatch( { type: 'login', username: res.data.username})
         //The user is an admin
         if (res.data.role === 'admin'){
           alert('you are an admin')
@@ -48,8 +50,8 @@ class Home extends Component {
         else if (res.data.role === 'student'){
           console.log(this.props)
           console.log(res.data)
-          alert('you are a student')
-          window.location = "/Student"
+          this.props.dispatch( { type: 'handleUser', user: res.data})
+          //alert('you are a student')
         }
         //Not sure what the user is
         else {
@@ -61,7 +63,16 @@ class Home extends Component {
 
 
   render() {
-    return (
+
+    if (this.props.user) {
+      return (
+        <>
+          <Student user={this.props.user}/>
+        </>
+      )
+    }
+    else {
+      return (
         <>
           <div id="content">
             <p>Username</p>
@@ -75,6 +86,7 @@ class Home extends Component {
       );
     }
   }
+}
 
 function mapStateToProps(state) {
   const {user, username} = state;

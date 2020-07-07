@@ -21,10 +21,6 @@ const App = () => (
       <Route exact path="/Teacher/" component={Teacher} />
       <Route exact path="/" component={Home} />
 
-
-
-
-
       </Switch>
     </div>
   </Router>
