@@ -4,7 +4,6 @@ import styles from '../../App.css';
 
 
 import axios from 'axios'
-import styles from '../../App.css';
 
 class Home extends Component {
   constructor(props){

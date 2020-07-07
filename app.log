@@ -1599,3 +1599,89 @@ KeyError: 'username'
 2020-07-03 12:43:07,655 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 12:43:07] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
 2020-07-03 12:43:07,664 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
 2020-07-03 12:43:07,891 - werkzeug:113 - INFO - 127.0.0.1 - - [03/Jul/2020 12:43:07] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:39:57,983 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 17:55:09,411 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 17:55:53,547 - __main__:1891 - ERROR - Exception on /students [GET]
+Traceback (most recent call last):
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jesse\Desktop\lala\SchoolSystem\main.py", line 17, in students
+    value = bytes(json.dumps(users, cls=UserEncoder), 'utf-8')
+NameError: name 'json' is not defined
+2020-07-06 17:55:53,564 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:55:53] "[35m[1mGET /students HTTP/1.1[0m" 500 -
+2020-07-06 17:56:32,494 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 17:56:36,950 - __main__:1891 - ERROR - Exception on /students [GET]
+Traceback (most recent call last):
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\jesse\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jesse\Desktop\lala\SchoolSystem\main.py", line 18, in students
+    value = bytes(json.dumps(users, cls=UserEncoder), 'utf-8')
+NameError: name 'UserEncoder' is not defined
+2020-07-06 17:56:36,963 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:56:36] "[35m[1mGET /students HTTP/1.1[0m" 500 -
+2020-07-06 17:57:09,450 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 17:57:13,323 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:57:13] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:15:47,183 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:15:47] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:16:05,468 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:16:05] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:16:16,429 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:16:16] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:16:36,608 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:16:36] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:17:48,047 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:17:48] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:21:51,434 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:21:51] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:22:01,509 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:22:01] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:23:00,585 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:23:00] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:23:46,601 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:23:46] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:24:08,505 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:24:08] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:27:25,626 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:27:25] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:27:29,914 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:27:29] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:27:43,257 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:27:43] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:27:47,569 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:27:47] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:29:58,595 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:29:58] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:30:28,694 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:30:28] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:30:36,590 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:30:36] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:31:30,864 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:31:30] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:32:09,690 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:32:09] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:32:17,220 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:32:17] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:33:49,105 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:33:49] "[37mGET /teachers HTTP/1.1[0m" 200 -
+2020-07-06 18:33:49,593 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:33:49] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:33:50,546 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:33:50] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:33:50,852 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:33:50] "[37mGET /teachers HTTP/1.1[0m" 200 -
+2020-07-06 18:34:25,023 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:34:25] "[37mGET /teachers HTTP/1.1[0m" 200 -
+2020-07-06 18:34:25,027 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:34:25] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:35:07,829 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:35:07] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:35:08,128 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:35:08] "[37mGET /teachers HTTP/1.1[0m" 200 -
+2020-07-06 18:35:50,157 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:35:50] "[37mGET /teachers HTTP/1.1[0m" 200 -
+2020-07-06 18:35:50,158 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:35:50] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:36:06,874 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:36:06] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:36:07,180 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:36:07] "[37mGET /teachers HTTP/1.1[0m" 200 -
+2020-07-06 18:36:28,900 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:36:28] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:36:28,901 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:36:28] "[37mGET /teachers HTTP/1.1[0m" 200 -
+2020-07-06 18:36:40,718 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:36:40] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:36:41,021 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:36:41] "[37mGET /teachers HTTP/1.1[0m" 200 -
+2020-07-06 18:37:56,832 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:37:56] "[37mGET /students HTTP/1.1[0m" 200 -
+2020-07-06 18:37:56,842 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:37:56] "[37mGET /teachers HTTP/1.1[0m" 200 -
+2020-07-06 18:38:03,527 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:38:03] "[37mOPTIONS /students/ff HTTP/1.1[0m" 200 -
+2020-07-06 18:38:03,835 - SchoolSystem.main:30 - INFO - {'teacher': 'chloe'}
+2020-07-06 18:38:03,920 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:38:03] "[37mPUT /students/ff HTTP/1.1[0m" 200 -
