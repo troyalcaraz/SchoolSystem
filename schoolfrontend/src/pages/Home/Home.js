@@ -1,5 +1,10 @@
 import React, { Component } from "react";
+import styles from '../../App.css';
+
+
+
 import axios from 'axios'
+import styles from '../../App.css';
 
 class Home extends Component {
   constructor(props){
@@ -60,13 +65,16 @@ class Home extends Component {
     }
     else {
       return (
+        <center>
+          <div id="title"><h1>School System</h1></div>
           <div id="content">
-            <p>Username</p>
-            <input type="text" ref={this.user_ref} name="username"/>
-            <p>Password</p>
+            Username<br/>
+            <input type="text" ref={this.user_ref} name="username"/><br/>
+            Password<br/>
             <input type="password" name="password"/><br></br>
             <button id="loginbutton" onClick={this.login}>Log In</button>
           </div>
+          </center>
       );
     }
   }
