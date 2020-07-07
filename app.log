@@ -970,3 +970,458 @@ TypeError: The view function did not return a valid response. The function eithe
 2020-07-01 18:37:42,267 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
 2020-07-01 18:37:42,270 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
 2020-07-01 18:37:42,292 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:42] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 16:47:17,503 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 16:47:44,918 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:47:44] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 16:47:44,920 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 16:47:45,104 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:47:45] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 16:47:46,786 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 16:47:46,818 - flask:1892 - ERROR - Exception on /users [GET]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 17, in users
+    value = bytes(json.dumps(users, cls=UserEncoder), 'utf-8')
+NameError: name 'json' is not defined
+2020-07-06 16:47:46,822 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:47:46] "[35m[1mGET /users HTTP/1.1[0m" 500 -
+2020-07-06 16:48:01,569 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 16:48:01,588 - flask:1892 - ERROR - Exception on /users [GET]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 17, in users
+    value = bytes(json.dumps(users, cls=UserEncoder), 'utf-8')
+NameError: name 'json' is not defined
+2020-07-06 16:48:01,589 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:48:01] "[35m[1mGET /users HTTP/1.1[0m" 500 -
+2020-07-06 16:48:11,195 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:48:11] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 16:48:11,197 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 16:48:11,220 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:48:11] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 16:48:12,592 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 16:48:12,644 - flask:1892 - ERROR - Exception on /users [GET]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 17, in users
+    value = bytes(json.dumps(users, cls=UserEncoder), 'utf-8')
+NameError: name 'json' is not defined
+2020-07-06 16:48:12,645 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:48:12] "[35m[1mGET /users HTTP/1.1[0m" 500 -
+2020-07-06 16:48:34,466 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 16:48:40,757 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:48:40] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 16:48:40,759 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 16:48:40,991 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:48:40] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 16:48:42,395 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 16:48:42,417 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:48:42] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 16:48:54,781 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:48:54] "[33mOPTIONS / HTTP/1.1[0m" 404 -
+2020-07-06 16:49:40,173 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 16:49:40,200 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:49:40] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 16:51:11,803 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 16:51:33,836 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:51:33] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 16:51:33,839 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 16:51:38,381 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 16:51:46,824 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:51:46] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 16:51:46,826 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 16:51:55,763 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 16:52:07,566 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:52:07] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 16:52:07,568 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 16:52:38,999 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 16:53:12,240 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 16:53:25,939 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:53:25] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 16:53:25,942 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 16:53:26,698 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:53:26] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 16:53:28,947 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 16:53:29,038 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:53:29] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 16:53:39,604 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 16:53:39] "[33mOPTIONS / HTTP/1.1[0m" 404 -
+2020-07-06 17:01:57,542 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:01:57,647 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:01:57] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:02:17,290 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:02:17] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:02:17,292 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:02:17,847 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:02:17] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:02:34,098 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:02:34,190 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:02:34] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:02:36,744 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:02:36] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:05:09,905 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:05:09] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:05:09,907 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:05:10,000 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:05:10] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:05:11,621 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:05:11,719 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:05:11] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:05:16,098 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:05:16] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:07:30,100 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 17:07:40,111 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:07:40] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:07:40,113 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:07:40,986 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:07:40] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:07:42,881 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:07:42,983 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:07:42] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:07:44,791 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:07:44] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:10:57,080 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:10:57] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:10:57,082 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:10:57,176 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:10:57] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:10:58,699 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:10:58,795 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:10:58] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:11:01,451 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:11:01] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:12:32,489 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:12:32] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:15:20,947 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:15:21,042 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:15:21] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:15:24,951 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:15:25,046 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:15:25] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:15:29,300 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:15:29] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:18:19,572 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:18:19,667 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:18:19] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:18:38,280 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:18:38,676 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:18:38] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:18:50,604 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:18:50] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:18:50,606 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:18:50,702 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:18:50] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:18:52,513 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:18:52,615 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:18:52] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:18:54,860 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:18:54] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:29:37,335 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:29:37,432 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:29:37] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:38:11,016 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:38:11] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:38:11,018 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:38:11,128 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:38:11] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:38:13,058 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:38:13,158 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:38:13] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:38:16,588 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:38:16] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:41:53,444 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:41:53,820 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:41:53] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:42:07,335 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 17:42:12,253 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:42:13,000 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:42:13] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:42:20,457 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:42:20] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:42:20,459 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:42:20,552 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:42:20] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:42:22,067 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:42:22,162 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:42:22] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:42:23,951 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:42:23] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:42:52,903 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:42:53,000 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:42:53] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:43:22,692 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:43:22] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:43:22,695 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:43:22,842 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:43:22] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:43:24,987 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:43:25,083 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:43:25] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:43:26,708 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:43:26] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:44:01,240 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:44:01,332 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:44:01] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:44:36,499 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:44:36,590 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:44:36] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:44:44,134 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:44:44] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:44:44,136 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:44:44,227 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:44:44] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:44:46,016 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:44:46,108 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:44:46] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:44:47,834 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:44:47] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:46:28,784 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:46:28,877 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:46:28] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:46:43,762 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:46:43,855 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:46:43] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:47:19,088 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:47:19,185 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:47:19] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:48:00,550 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:48:00] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:48:00,552 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:48:00,649 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:48:00] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:48:02,668 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:48:02,758 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:48:02] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:48:23,040 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:48:23,132 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:48:23] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:48:33,274 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:48:33] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:48:33,276 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:48:33,370 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:48:33] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:48:35,097 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:48:35,190 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:48:35] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:48:41,649 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:48:41] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:53:23,364 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:53:23,455 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:53:23] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:53:37,987 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:53:37] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:53:37,990 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:53:38,082 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:53:38] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:53:39,823 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:53:39,918 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:53:39] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:53:43,533 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:53:43] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 17:56:50,498 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:56:50,589 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:56:50] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:57:32,565 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:57:32] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 17:57:32,567 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 17:57:32,656 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:57:32] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 17:57:34,848 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 17:57:34,942 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:57:34] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 17:57:38,520 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 17:57:38] "[33mOPTIONS /Delete HTTP/1.1[0m" 404 -
+2020-07-06 18:00:28,708 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:00:28,800 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:00:28] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:00:41,950 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:00:41] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:00:41,952 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 18:00:42,054 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:00:42] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 18:00:43,700 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:00:43,793 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:00:43] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:01:27,398 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:01:27,493 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:01:27] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:02:21,575 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:02:21,668 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:02:21] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:02:25,944 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:02:26,036 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:02:26] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:02:55,255 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:02:55,358 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:02:55] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:02:57,168 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:02:57,259 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:02:57] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:03:32,350 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:03:32,441 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:03:32] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:03:37,830 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:03:37,926 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:03:37] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:03:57,184 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:03:57,275 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:03:57] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:04:12,943 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:04:13,038 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:04:13] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:04:30,613 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:04:30,704 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:04:30] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:04:44,093 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:04:44,187 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:04:44] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:04:56,104 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:04:56,198 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:04:56] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:05:04,255 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:05:04,347 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:05:04] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:06:27,954 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:06:28,058 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:06:28] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:06:31,911 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:06:34,751 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:06:34] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:07:15,888 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:07:15,982 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:07:15] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:08:18,033 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:08:18,126 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:08:18] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:09:19,291 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:09:19,384 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:09:19] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:10:16,627 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:10:16,727 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:10:16] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:10:29,990 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:10:30,092 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:10:30] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:10:53,140 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:10:53,233 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:10:53] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:11:06,601 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:11:06,693 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:11:06] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:11:52,337 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:11:52] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:11:52,340 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-06 18:11:52,434 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:11:52] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-06 18:11:54,014 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:11:54,106 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:11:54] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:13:33,603 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:13:33,694 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:13:33] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:13:46,822 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:13:46,915 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:13:46] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:14:31,867 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:14:31,962 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:14:31] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:15:02,994 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:15:03,095 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:15:03] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:15:34,078 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:15:34,179 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:15:34] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:15:48,190 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:15:48,282 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:15:48] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:16:54,873 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:16:54,964 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:16:54] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:18:25,203 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:18:25,294 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:18:25] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:18:48,430 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:18:48,525 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:18:48] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:18:51,034 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:18:51] "[37mOPTIONS //users HTTP/1.1[0m" 200 -
+2020-07-06 18:18:51,036 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 54, in login
+    db.remove_user(request.json)
+TypeError: remove_user() missing 1 required positional argument: '_id'
+2020-07-06 18:18:51,045 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:18:51] "[35m[1mDELETE //users HTTP/1.1[0m" 500 -
+2020-07-06 18:19:21,123 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:19:21,219 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:19:21] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:20:23,346 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:20:23,439 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:20:23] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:20:25,817 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:20:25] "[37mOPTIONS //users HTTP/1.1[0m" 200 -
+2020-07-06 18:20:25,819 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/projectbackup/SchoolSystem/main.py", line 54, in login
+    db.remove_user(request.json)
+TypeError: remove_user() missing 1 required positional argument: '_id'
+2020-07-06 18:20:25,828 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:20:25] "[35m[1mDELETE //users HTTP/1.1[0m" 500 -
+2020-07-06 18:20:39,287 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:20:42,278 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:20:43,393 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:20:43] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:20:52,367 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:20:52] "[37mOPTIONS //users HTTP/1.1[0m" 200 -
+2020-07-06 18:20:52,369 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:20:52,469 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:20:52,471 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:20:52] "[35m[1mDELETE //users HTTP/1.1[0m" 500 -
+2020-07-06 18:21:08,254 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:21:08,356 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:21:08] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:21:11,610 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:21:11] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:21:11,612 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:21:11,706 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:21:11,708 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:21:11] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:23:35,000 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:23:38,378 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:23:39,146 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:23:39] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:23:41,768 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:23:41] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:23:41,770 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:23:41,859 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:23:41,861 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:23:41] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:24:25,947 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:24:28,728 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:24:29,697 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:24:29] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:24:31,137 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:24:31] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:24:31,140 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:24:31,236 - SchoolSystem.data.mongo:40 - INFO - {'n': 0, 'opTime': {'ts': Timestamp(1594085070, 8), 't': 11}, 'electionId': ObjectId('7fffffff000000000000000b'), 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1594085070, 8), 'signature': {'hash': b'\x9bN$r\x8a\xc2\x1f\xfaX\x1a\x1a\x0b\x06\x1a%c\x17"\x83%', 'keyId': 6833401626313621507}}, 'operationTime': Timestamp(1594085070, 8)}
+2020-07-06 18:24:31,238 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:24:31,239 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:24:31] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:25:33,534 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:25:37,457 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:25:38,237 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:25:38] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:25:39,202 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:25:39] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:25:39,204 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:25:39,296 - SchoolSystem.data.mongo:40 - INFO - {'n': 0, 'opTime': {'ts': Timestamp(1594085139, 1), 't': 11}, 'electionId': ObjectId('7fffffff000000000000000b'), 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1594085139, 1), 'signature': {'hash': b'\xdf\xe0\x92<\xe2w1\xff\x9e\x8b\xbf\xd5\xb04\xe8\xfa\x1bGmn', 'keyId': 6833401626313621507}}, 'operationTime': Timestamp(1594085139, 1)}
+2020-07-06 18:25:39,296 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:25:39,298 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:25:39] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:29:11,206 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:29:11,298 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:29:11] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:30:14,431 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:30:17,735 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:30:18,489 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:30:18] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:30:20,394 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:30:20] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:30:20,396 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:30:20,492 - SchoolSystem.data.mongo:40 - INFO - None
+2020-07-06 18:30:20,493 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:30:20,494 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:30:20] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-06 18:31:28,056 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-06 18:31:31,673 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve all users from database
+2020-07-06 18:31:32,501 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:31:32] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-07-06 18:31:33,598 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:31:33] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-06 18:31:33,600 - SchoolSystem.data.mongo:37 - INFO - Attempting to remove user from database
+2020-07-06 18:31:33,702 - SchoolSystem.data.mongo:41 - INFO - None
+2020-07-06 18:31:33,702 - flask:1892 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/user/Desktop/projectbackup/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2020-07-06 18:31:33,704 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:31:33] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -

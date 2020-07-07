@@ -6,7 +6,7 @@ import styles from '../../App.css';
 class Admin extends Component {
   constructor(props){
     super(props);
-    this.URI = 'http://localhost:5000/';
+    this.URI = 'http://localhost:5000';
     this.state ={
       users: []
     }
@@ -18,7 +18,7 @@ class Admin extends Component {
   }
 
   getUsers = () => {
-    axios.get(this.URI + "users")
+    axios.get(this.URI + "/users")
     .then(res => this.setState({users: res.data}))
   }
 
@@ -26,18 +26,19 @@ class Admin extends Component {
     document.getElementById("user").innerHTML = event.target.innerText;
   }
 
-  remove = () => {
-    axios.delete(this.URI + document.getElementById("user").innerHTML,{
-      user: document.getElementById("user").innerHTML
-    })
-    .then(res => console.log(res.data))
+  remove = (event) => {
+    var name = event.target.previousSibling.wholeText
+    console.log(name)
+    axios.delete(this.URI + '/users', name)
+      .then(res => console.log(res.data))
   };
 
   render() {
     return(
       <div id="users">
           <p  style={this.state.bold}>Users</p>
-          { this.state.users.map(user => <p onClick={this.user}>{user.username} <button id="deleteButton" onClick={this.remove}>Delete</button></p>) }
+          { this.state.users.map(user =>
+            <>{user.fullname}<button onClick={this.remove}>Delete</button><br/></>)}
           <p id="user" style={this.state.bold}></p>
       </div>
     );

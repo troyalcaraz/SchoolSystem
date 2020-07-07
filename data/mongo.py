@@ -13,7 +13,7 @@ from SchoolSystem.data.logger import get_logger
 _log = get_logger(__name__)
 
 try:
-    _scl = pymongo.MongoClient(os.environ.get('MONGO_URI')).project2
+    _scl = pymongo.MongoClient(os.environ.get('TroyMongoURI')).project2
 except:
     _log.exception('Could not connect to Mongo')
     raise
@@ -25,18 +25,21 @@ def get_users():
     return [User.from_dict(user) for user in dict_list]
 
 def login(username):
-    '''A function that takes in a username and returns a user object'''
+    '''A function that takenano s in a username and returns a user object'''
     _log.info('Attempting to retrieve user from database')
     query_dict = {'username': username}
     user_dict = _scl.users.find_one(query_dict)
     _log.debug(user_dict)
     return User.from_dict(user_dict) if user_dict else None
 
-def remove_user(username: str, _id):
+def remove_user(fullname: str):
     '''Removes a user from the database'''
     _log.info('Attempting to remove user from database')
-    query = {"id": _id}
-    _scl['users'].remove(query)
+    _log.debug(fullname)
+    query = {"fullname": fullname}
+    success = _scl.users.find_one_and_delete(query)
+    _log.info(success)
+    return success if success else None
 
 def _get_id():
     '''Retrieves the next id in the database and increments it'''
