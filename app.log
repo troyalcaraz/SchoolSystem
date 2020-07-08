@@ -2406,3 +2406,22 @@ NameError: name 'UserEncoder' is not defined
 2020-07-06 18:38:03,527 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:38:03] "[37mOPTIONS /students/ff HTTP/1.1[0m" 200 -
 2020-07-06 18:38:03,835 - SchoolSystem.main:30 - INFO - {'teacher': 'chloe'}
 2020-07-06 18:38:03,920 - werkzeug:113 - INFO - 127.0.0.1 - - [06/Jul/2020 18:38:03] "[37mPUT /students/ff HTTP/1.1[0m" 200 -
+2020-07-07 16:41:05,181 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-07 16:42:01,744 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-07 17:35:42,977 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 17:35:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-07 17:35:42,980 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-07 17:35:43,796 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 17:35:43] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-07 17:47:24,311 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-07 18:27:42,461 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 18:27:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-07 18:27:42,463 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-07 18:27:43,267 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 18:27:43] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-07 18:29:14,588 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 18:29:14] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-07 18:29:14,591 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-07 18:29:14,683 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 18:29:14] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-07 18:32:40,879 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 18:32:40] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-07 18:32:40,882 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-07 18:32:40,974 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 18:32:40] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-07 18:37:15,627 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 18:37:15] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-07 18:37:15,631 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-07 18:37:15,724 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 18:37:15] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-07 18:37:48,699 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

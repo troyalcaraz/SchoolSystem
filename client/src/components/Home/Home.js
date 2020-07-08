@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import styles from '../../App.css';
-
-
-
 import axios from 'axios'
+import App from "../../App";
+import '../../App.js';
 
 class Home extends Component {
   constructor(props){
@@ -35,17 +34,17 @@ class Home extends Component {
         console.log(res.data.role);
          this.setState({ user: res.data.username});
          if (res.data.role === 'admin'){
-           alert('you are an admin')
+           //alert('you are an admin')
           //  this.setState()
-          //  <Link to="../Admin/Admin.js">
-          window.location = "/Admin"
+          // <Link to="/adminMenu.component"></Link>
+          window.location = "/adminMenu.component"
          }
          else if (res.data.role === 'teacher'){
-           alert('you are a teacher')
+           //alert('you are a teacher')
            window.location = "/Teacher"
          }
          else if (res.data.role === 'student'){
-          alert('you are a student')
+          //alert('you are a student')
           window.location = "/Student"
 
         }
