@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 
 
 class Student extends Component {
-  constructor(props){
+  /* constructor(props){
     super(props);
-  }
+  } */
 
   render() {
     console.log(this.props)

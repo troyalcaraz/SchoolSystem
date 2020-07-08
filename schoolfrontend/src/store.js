@@ -7,7 +7,6 @@ const initialState = {
 
 function schoolReducer(state = initialState, action) {
     console.log(state);
-    console.log(action);
     switch(action.type) {
         case 'login':
             return Object.assign({}, state, {username: ''}, {user: action.user})

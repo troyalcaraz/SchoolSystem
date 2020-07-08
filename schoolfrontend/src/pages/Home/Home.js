@@ -48,22 +48,22 @@ class Home extends Component {
   render() {
 
     if (this.props.user) {
-      if (this.props.user.role == 'student') {
+      if (this.props.user.role === 'student') {
         return (
           <>
-            <Student user={this.props.user}/>
+            <Student/>
             <p>
             <button id="logout" onClick={this.handleLogout}>Logout</button></p>
           </>
         )
       }
-      else if (this.props.role == 'teacher') {
+      else if (this.props.role === 'teacher') {
         return (
           <>
           </>
         )
       }
-      else if (this.props.role == 'admin') {
+      else if (this.props.role === 'admin') {
         return (
           <>
           </>
