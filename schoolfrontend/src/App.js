@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -20,10 +20,6 @@ const App = () => (
       <Route exact path="/Student/" component={Student} />
       <Route exact path="/Teacher/" component={Teacher} />
       <Route exact path="/" component={Home} />
-
-
-
-
 
       </Switch>
     </div>
