@@ -970,3 +970,38 @@ TypeError: The view function did not return a valid response. The function eithe
 2020-07-01 18:37:42,267 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:42] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
 2020-07-01 18:37:42,270 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
 2020-07-01 18:37:42,292 - werkzeug:113 - INFO - 127.0.0.1 - - [01/Jul/2020 18:37:42] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-07 20:41:50,109 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-07 20:44:01,776 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 20:44:01] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-07 20:44:02,027 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-07 20:44:02,552 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 20:44:02] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-07 20:44:03,391 - __main__:1891 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "c:\users\alcar\revature\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\alcar\revature\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\alcar\revature\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\alcar\revature\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-07-07 20:44:03,410 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 20:44:03] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-07 20:44:05,448 - __main__:1891 - ERROR - Exception on /users [DELETE]
+Traceback (most recent call last):
+  File "c:\users\alcar\revature\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\alcar\revature\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\alcar\revature\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\alcar\revature\schoolsystem\schoolsystem\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-07-07 20:44:05,452 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 20:44:05] "[35m[1mDELETE /users HTTP/1.1[0m" 500 -
+2020-07-07 20:45:11,680 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-07 20:45:14,496 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 20:45:14] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-07 20:45:14,747 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 20:45:14] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-07-07 20:45:17,071 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 20:45:17] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-07 20:45:17,378 - SchoolSystem.data.mongo:23 - INFO - Attempting to retrieve user from database
+2020-07-07 20:45:17,882 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 20:45:17] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-07-07 20:45:19,086 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 20:45:19] "[37mDELETE /users HTTP/1.1[0m" 204 -
