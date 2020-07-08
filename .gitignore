@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-
+bin/
 # testing
 /coverage
 
@@ -28,6 +28,6 @@ yarn-error.log*
 **/.vs/
 
 /Include/
-**/Lib/
+/Lib/
 /Scripts/
 pyvenv.cfg

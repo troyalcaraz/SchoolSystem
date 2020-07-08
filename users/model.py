@@ -1,6 +1,5 @@
 '''Defines the model for users'''
 import json
-import jwt
 import datetime
 
 from SchoolSystem.data.logger import get_logger
@@ -27,6 +26,10 @@ class User:
         '''Sets the id of the user'''
         self._id = _id
 
+    def get_role(self):
+        '''returns the role of the user'''
+        return self.role
+
     def login(self, username, password):
         '''Returns true id username and password match existing'''
         return self.username == username and self.password == password
@@ -44,10 +47,6 @@ class User:
     def to_dict(self):
         '''Returns the dictionary representation of itself'''
         return self.__dict__
-
-    def get_role(self):
-        '''returns the role of the user'''
-        return self.role
 
     @classmethod
     def from_dict(cls, input_user):
@@ -100,13 +99,14 @@ class Teacher(User):
 class Student(User):
     '''A class that defines how Students should behave'''
     def __init__(self, db_id=-1, fullname='', username='', password='', role='',
-                 absences=0, grade_level='', age=0):
+                 absences=0, grade_level='', age=0, teacher=''):
         super(). __init__(db_id, fullname, username, password, role)
         self.grades = []
         self.courses_taken = []
         self.absences = absences
         self.grade_level = grade_level
         self.age = age
+        self.teacher = teacher
 
 
 class UserEncoder(json.JSONEncoder):
