@@ -10,6 +10,7 @@ class Home extends Component {
     this.handleInput = this.handleInput.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.login = this.login.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
   studentService = new StudentService()
@@ -61,6 +62,15 @@ class Home extends Component {
     });
   };
 
+  
+  handleLogout = () => {
+    console.log(this.props)
+    this.studentService.logout().then(res =>
+      {
+        this.props.dispatch({ type: 'logout', username: '', user: null})
+      })
+  } 
+
 
   render() {
 
@@ -68,6 +78,8 @@ class Home extends Component {
       return (
         <>
           <Student user={this.props.user}/>
+          <p>
+          <button id="logout" onClick={this.handleLogout}>Logout</button></p>
         </>
       )
     }

@@ -1,26 +1,16 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import axios from 'axios';
 
 
 class Student extends Component {
   constructor(props){
     super(props);
-    this.handleShowGrades = this.handleShowGrades.bind(this);
-    this.handleRemoveGrades = this.handleRemoveGrades.bind(this);
   }
-  
-  handleShowGrades = () => {
-    
-  }
-  
-  handleRemoveGrades = () => {
-    
-  } 
 
   render() {
     console.log(this.props)
     if (this.props.user) {
+      //A Student is logged in and their grades are being displayed
       return (
         <>
           <h1> {this.props.user.fullname} </h1>
@@ -29,14 +19,11 @@ class Student extends Component {
                 <p key={grade.class}>{grade.class} : {grade.grade}</p>
               )}
           </div>
-          <p>
-          <button id="showgrades" onClick={this.handleShowGrades}>Grades</button></p>
-          <p>
-          <button id="removegrades" onClick={this.handleRemoveGrades}>Remove</button></p>
         </>
       );
     }
     else {
+      //No user is logged in
       return (
         <h1>Sorry No one is logged in</h1>
       )
@@ -45,9 +32,8 @@ class Student extends Component {
 }
 
 function mapStateToProps(state) {
-  const {user, username} = state;
-  return {user: user,
-          username: username}
+  const {user} = state;
+  return {user: user}
 }
 
 export default connect(mapStateToProps)(Student);

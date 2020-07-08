@@ -53,3 +53,6 @@ def login():
     #         return jsonify(db.get_user_by_id(User.decode_auth_token(auth_token))), 200
     #     else:
     #         return {}, 401
+    else:
+        empty = make_response({})
+        return empty, 204

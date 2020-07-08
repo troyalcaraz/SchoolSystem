@@ -2,9 +2,7 @@ import { createStore } from 'redux';
 
 const initialState = {
     user: null,
-    fullname: '',
     username: '',
-    grades: [],
 };
 
 function schoolReducer(state = initialState, action) {
@@ -13,6 +11,8 @@ function schoolReducer(state = initialState, action) {
     switch(action.type) {
         case 'login':
             return Object.assign({}, state, {username: ''})
+        case 'logout':
+            return Object.assign({}, state, {username: ''}, {user: action.user})
         case 'handleUsername':
             return Object.assign({}, state, {username: action.username})
         case 'handleUser':
