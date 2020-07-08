@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import Student from '../Student/Student';
-<<<<<<< HEAD
-=======
 import Teacher from '../Teacher/Teacher';
 import Admin from '../Admin/Admin'
->>>>>>> development
 import UserService from '../../service/user.service';
 
 class Home extends Component {
