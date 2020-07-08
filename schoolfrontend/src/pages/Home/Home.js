@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import Student from '../Student/Student';
-import StudentService from '../../service/student.service';
+import UserService from '../../service/user.service';
 
 class Home extends Component {
   constructor(props){
@@ -12,7 +12,7 @@ class Home extends Component {
     this.handleLogout = this.handleLogout.bind(this);
   }
 
-  studentService = new StudentService()
+  userService = new UserService()
 
   handleKeyDown(e) {
     if (e.key === 'Enter') {
@@ -27,7 +27,7 @@ class Home extends Component {
 
   login = () => {
     console.log(this.props)
-    this.studentService.login(this.props.username).then(res => {
+    this.userService.login(this.props.username).then(res => {
 
         console.log(res.data.role);
         console.log(res.data.username)
@@ -38,7 +38,7 @@ class Home extends Component {
   
   handleLogout = () => {
     console.log(this.props)
-    this.studentService.logout().then(res =>
+    this.userService.logout().then(res =>
       {
         this.props.dispatch({ type: 'logout', username: '', user: null})
       })

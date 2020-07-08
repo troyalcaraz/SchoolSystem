@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-class StudentService {
+class UserService {
     constructor(){
         this.URI = 'http://localhost:5000/users';
     }
@@ -15,4 +15,4 @@ class StudentService {
     }
 }
 
-export default StudentService;
+export default UserService;
