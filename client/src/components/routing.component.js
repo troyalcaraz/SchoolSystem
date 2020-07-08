@@ -5,16 +5,15 @@ import Home from "./Home";
 import { connect } from 'react-redux';
 
 
-// function UserNav(props) {
-//     const UserLoggedIn = props.user
-//     if (UserLoggedIn) {
-//         return <Nav className="mr-auto"><Link to='/auctionlist' className='nav_link'><h3>Auctions</h3></Link></Nav>
-//     }
-//     else {
-//         return <Nav className="mr-auto"></Nav>
-//     }
-// }
-
+function navigation(props) {
+    const userlogged = props.user
+    if (userlogged) {
+        return <Link to='/admin' className='nav_link'><h3>Admin</h3></Link>
+    }
+    else {
+        return null
+    }
+}
 
 class Routing extends Component{
     constructor(props) {
@@ -34,8 +33,8 @@ class Routing extends Component{
                 </Navbar> */}
 
                 {/* <Route path='/auctions/:id' component={BidForm}/>
-                <Route path='/auctionlist' component={AuctionList}/>
-                <Route path='/products' component={ProductForm}/> */}
+                <Route path='/auctionlist' component={AuctionList}/> */}
+                {/* <Route path='/AdminMenu' component={AdminMenu}/> */}
                 <Route path="/" component={Home}/>
                 {/* <Route path='/manage/:id' component={AuctionForm}/> */}
             </Router>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserService from '../services/user.service'
 import { connect } from 'react-redux';
+import AdminMenu from './adminMenu.component';
 
 class Login extends Component {
 
@@ -33,7 +34,7 @@ class Login extends Component {
         console.log(this.props)
         this.userService.login(this.props.username).then(
             (resp) => {
-                this.props.dispatch( { type: 'login', user: resp.data })
+                this.props.dispatch( { type: 'login', username: resp.data.username, user: resp.data })
             }
         )
     }
@@ -106,10 +107,15 @@ class Login extends Component {
 
     render() {
         console.log('rendering login')
-        if (this.props.user) {
-            return this.displayUser()
-        } else {
-            return this.getLoginForm()
+        console.log(this.props.user)
+        if (this.props.user){
+            if (this.props.user.role == 'admin'){
+                return (<AdminMenu/>);
+
+        // }
+        // return this.displayUser()
+            }else{
+                return this.getLoginForm()
         }
     }
 }

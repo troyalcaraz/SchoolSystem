@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import styles from '../../App.css';
 import { connect } from 'react-redux';
 import { Route, BrowserRouter as Router, Link } from 'react-router-dom';
 import AddUser from './addUser.component';
