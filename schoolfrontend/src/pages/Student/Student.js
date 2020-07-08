@@ -25,7 +25,7 @@ class Student extends Component {
     else {
       //No user is logged in
       return (
-        <h1>Sorry No one is logged in</h1>
+        <h1>You are not a Student</h1>
       )
     }
   }

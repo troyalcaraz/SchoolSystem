@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import Student from '../Student/Student';
 import StudentService from '../../service/student.service';
-import { Redirect } from "react-router-dom";
 
 class Home extends Component {
   constructor(props){
@@ -14,10 +13,6 @@ class Home extends Component {
   }
 
   studentService = new StudentService()
-
-  componentDidMount() {
-
-  }
 
   handleKeyDown(e) {
     if (e.key === 'Enter') {
@@ -36,29 +31,7 @@ class Home extends Component {
 
         console.log(res.data.role);
         console.log(res.data.username)
-        this.props.dispatch( { type: 'login', username: res.data.username})
-        //The user is an admin
-        if (res.data.role === 'admin'){
-          alert('you are an admin')
-          window.location = "/Admin"
-        }
-        //The user is a teacher
-        else if (res.data.role === 'teacher'){
-          alert('you are a teacher')
-          window.location = "/Teacher"
-        }
-        //This user is a student
-        else if (res.data.role === 'student'){
-          console.log(this.props)
-          console.log(res.data)
-          this.props.dispatch( { type: 'handleUser', user: res.data})
-          //alert('you are a student')
-        }
-        //Not sure what the user is
-        else {
-          alert('you are a NUN')
-        }
-
+        this.props.dispatch( { type: 'login', username: res.data.username, user: res.data})
     });
   };
 
@@ -75,13 +48,34 @@ class Home extends Component {
   render() {
 
     if (this.props.user) {
-      return (
-        <>
-          <Student user={this.props.user}/>
-          <p>
-          <button id="logout" onClick={this.handleLogout}>Logout</button></p>
-        </>
-      )
+      if (this.props.user.role == 'student') {
+        return (
+          <>
+            <Student user={this.props.user}/>
+            <p>
+            <button id="logout" onClick={this.handleLogout}>Logout</button></p>
+          </>
+        )
+      }
+      else if (this.props.role == 'teacher') {
+        return (
+          <>
+          </>
+        )
+      }
+      else if (this.props.role == 'admin') {
+        return (
+          <>
+          </>
+        )
+      }
+      else {
+        return (
+          <>
+            <h1>Something's Wrong</h1>
+          </>
+        )
+      }
     }
     else {
       return (
