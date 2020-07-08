@@ -28,6 +28,6 @@ yarn-error.log*
 **/.vs/
 
 /Include/
-/Lib/
-/Scripts/
+**/Lib/
+**/Scripts/
 pyvenv.cfg
