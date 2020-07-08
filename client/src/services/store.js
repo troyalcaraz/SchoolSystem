@@ -25,8 +25,8 @@ function schoolReducer(state = initialState, action){
         //     return Object.assign({}, state, {auction: action.auction})
         // case 'loadAuctionList':
         //     return Object.assign({}, state, {auctionList: action.auctionList})
-        // default:
-        //     return state;
+        default: //leave this in!!!!
+            return state;
     }
 }
 

@@ -2425,3 +2425,7 @@ NameError: name 'UserEncoder' is not defined
 2020-07-07 18:37:15,631 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
 2020-07-07 18:37:15,724 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 18:37:15] "[37mPOST /users HTTP/1.1[0m" 200 -
 2020-07-07 18:37:48,699 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-07 19:29:10,281 - werkzeug:113 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-07 19:37:15,987 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 19:37:15] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-07-07 19:37:15,993 - SchoolSystem.data.mongo:29 - INFO - Attempting to retrieve user from database
+2020-07-07 19:37:16,980 - werkzeug:113 - INFO - 127.0.0.1 - - [07/Jul/2020 19:37:16] "[37mPOST /users HTTP/1.1[0m" 200 -

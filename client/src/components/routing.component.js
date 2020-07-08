@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter as Router, Link } from 'react-router-dom';
 import Login from './login.component';
 import Home from "./Home";
-
 import { connect } from 'react-redux';
 
 
@@ -46,8 +45,8 @@ class Routing extends Component{
 }
 
 function mapStateToProps(state) {
-    const { user } = state
-    return {user: user}
+    const { user, username } = state
+    return {user: user, username: username}
 }
 
 export default connect(mapStateToProps)(Routing);
